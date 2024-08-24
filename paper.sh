@@ -121,7 +121,7 @@ while true; do
 
             # Change to server directory
             cd "$SERVER_DIR"
-
+        
             # Function to download Paper JAR and handle invalid links
             download_paper() {
                 local paper_url="$1"
