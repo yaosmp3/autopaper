@@ -23,9 +23,10 @@ if [ "$choice" == "y" ]; then
     PAPER_JAR=$(basename "$PAPER_URL") # Extract filename from URL
     wget "$PAPER_URL"
 else
-    # Download specific Paper version (default URL)
-    PAPER_JAR="paper-1.21.1-40.jar"
-    wget "https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/40/downloads/${PAPER_JAR}"
+    # Download specific Paper version from the provided URL 
+    PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/40/downloads/paper-1.21.1-40.jar" 
+    PAPER_JAR=$(basename "$PAPER_URL")
+    wget "$PAPER_URL"
 fi
 
 # Rename the downloaded JAR file to "paper.jar"
