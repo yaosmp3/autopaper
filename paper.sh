@@ -1,91 +1,33 @@
 #!/bin/bash
 
+# Function to handle invalid download link
+download_file() {
+    local file_url="$1"
+    local file_name="$2"
+
+    # Attempt to download the file, but only check the header 
+    if wget --spider -S "$file_url" 2>&1 | grep -q "HTTP/1.1 200 OK"; then
+        wget "$file_url" -O "$file_name" || { echo "Download failed."; exit 1; }
+    else
+        echo "Invalid download link. Please try again."
+        read -p "Paste the download link: " file_url
+        download_file "$file_url" "$file_name" # Retry the download with the new link
+    fi
+}
+
 # Check if Java is installed
 if ! command -v java &> /dev/null; then
     echo "Java is not installed. Please install Java and try again."
     exit 1
 fi
 
-# Create server directory if it doesn't exist
-SERVER_DIR="minecraft_server"
-if [ ! -d "$SERVER_DIR" ]; then
-    mkdir "$SERVER_DIR"
-fi
+# Function to create server.properties
+create_server_properties() {
+    local file_path="$1"
+    local online_mode="$2"
+    local enforce_secure_profile="$3"
 
-# Change to server directory
-cd "$SERVER_DIR"
-
-# Function to download Paper JAR and handle invalid links
-download_paper() {
-    local paper_url="$1"
-    local paper_jar=$(basename "$paper_url")
-
-    # Attempt to download the file, but only check the header 
-    if wget --spider -S "$paper_url" 2>&1 | grep -q "HTTP/1.1 200 OK"; then
-        wget "$paper_url" -O "paper.jar" || { echo "Download failed."; exit 1; }
-    else
-        echo "Invalid Paper download link. Please try again."
-        read -p "Paste the Paper download link: " paper_url
-        download_paper "$paper_url" # Retry the download with the new link
-    fi
-}
-
-# Ask if the user wants to provide a custom Paper download link
-while true; do
-    read -p "Do you want to provide a custom Paper download link? (y/n): " choice
-    case "$choice" in
-        [Yy]* ) 
-            read -p "Paste the Paper download link: " PAPER_URL
-            download_paper "$PAPER_URL"
-            break;;
-        [Nn]* ) 
-            while true; do
-                read -p "Are you sure you want to install Paper version 1.21.1? (y/n): " confirm
-                case "$confirm" in
-                    [Yy]* ) 
-                        PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/40/downloads/paper-1.21.1-40.jar"
-                        download_paper "$PAPER_URL"
-                        break 2;; # Break out of both loops
-                    [Nn]* ) 
-                        break;; # Go back to the initial custom link question
-                    * ) echo "Please answer 'y' or 'n'.";;
-                esac
-            done
-            ;;
-        * ) echo "Please answer 'y' or 'n'.";;
-    esac
-done
-
-# Ask if the server should be cracked
-while true; do
-    read -p "Do you want your Minecraft server to be a cracked server? (y/n): " cracked_choice
-    case "$cracked_choice" in
-        [Yy]* ) 
-            ONLINE_MODE="false"
-            ENFORCE_SECURE_PROFILE="false"
-            break;;
-        [Nn]* ) 
-            ONLINE_MODE="true"
-            ENFORCE_SECURE_PROFILE="true"
-            break;;
-        * ) echo "Please answer 'y' or 'n'.";;
-    esac
-done
-
-# Create plugins folder if it doesn't exist
-if [ ! -d "plugins" ]; then
-    mkdir "plugins"
-fi
-
-# Download Playit.gg plugin
-PLAYIT_URL="https://github.com/playit-cloud/playit-minecraft-plugin/releases/latest/download/playit-minecraft-plugin.jar"
-wget -P plugins "$PLAYIT_URL" || { echo "Failed to download Playit plugin."; exit 1; }
-
-# Agree to EULA
-echo "eula=true" > eula.txt
-
-# Create server.properties file
-cat <<EOL > server.properties
+    cat <<EOL > "$file_path"
 #Minecraft server properties
 #Sat Aug 24 05:45:45 UTC 2024
 accepts-transfers=false
@@ -101,7 +43,7 @@ enable-jmx-monitoring=false
 enable-query=false
 enable-rcon=false
 enable-status=true
-enforce-secure-profile=$ENFORCE_SECURE_PROFILE
+enforce-secure-profile=$enforce_secure_profile
 enforce-whitelist=false
 entity-broadcast-range-percentage=100
 force-gamemode=false
@@ -123,7 +65,7 @@ max-tick-time=60000
 max-world-size=29999984
 motd=A Minecraft Server
 network-compression-threshold=256
-online-mode=$ONLINE_MODE
+online-mode=$online_mode
 op-permission-level=4
 player-idle-timeout=0
 prevent-proxy-connections=false
@@ -151,21 +93,166 @@ use-native-transport=true
 view-distance=20
 white-list=false
 EOL
+}
 
-# Start server for the first time to generate necessary files
-java -Xmx8G -jar "paper.jar" nogui
+# Ask user to select between Paper or Fabric
+while true; do
+    read -p "Do you want to install 'paper' or 'fabric'? " server_type
+    case "$server_type" in
+        [Pp]* )
+            SERVER_DIR="minecraft_server"
+            if [ ! -d "$SERVER_DIR" ]; then
+                mkdir "$SERVER_DIR"
+            fi
 
-# Stop the server gracefully (manual intervention needed here)
-echo "Please stop the server manually before continuing."
+            # Change to server directory
+            cd "$SERVER_DIR"
 
-# Create start script
-echo "#!/bin/bash
-java -Xmx8G -jar paper.jar nogui
-" > start.sh
-chmod +x start.sh
+            # Function to download Paper JAR and handle invalid links
+            download_paper() {
+                local paper_url="$1"
+                local paper_jar=$(basename "$paper_url")
 
-echo "Minecraft Paper server installation complete!"
+                download_file "$paper_url" "paper.jar"
+            }
 
-# Automatically start the server
-echo "Starting the server..."
-./start.sh
+            # Ask if the user wants to provide a custom Paper download link
+            while true; do
+                read -p "Do you want to provide a custom Paper download link? (y/n): " choice
+                case "$choice" in
+                    [Yy]* ) 
+                        read -p "Paste the Paper download link: " PAPER_URL
+                        download_paper "$PAPER_URL"
+                        break;;
+                    [Nn]* ) 
+                        while true; do
+                            read -p "Are you sure you want to install Paper version 1.21.1? (y/n): " confirm
+                            case "$confirm" in
+                                [Yy]* ) 
+                                    PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/40/downloads/paper-1.21.1-40.jar"
+                                    download_paper "$PAPER_URL"
+                                    break 2;; # Break out of both loops
+                                [Nn]* ) 
+                                    break;; # Go back to the initial custom link question
+                                * ) echo "Please answer 'y' or 'n'.";;
+                            esac
+                        done
+                        ;;
+                    * ) echo "Please answer 'y' or 'n'.";;
+                esac
+            done
+
+            # Ask if the server should be cracked
+            while true; do
+                read -p "Do you want your Minecraft server to be a cracked server? (y/n): " cracked_choice
+                case "$cracked_choice" in
+                    [Yy]* ) 
+                        ONLINE_MODE="false"
+                        ENFORCE_SECURE_PROFILE="false"
+                        break;;
+                    [Nn]* ) 
+                        ONLINE_MODE="true"
+                        ENFORCE_SECURE_PROFILE="true"
+                        break;;
+                    * ) echo "Please answer 'y' or 'n'.";;
+                esac
+            done
+
+            # Create plugins folder if it doesn't exist
+            if [ ! -d "plugins" ]; then
+                mkdir "plugins"
+            fi
+
+            # Download Playit plugin
+            PLAYIT_URL="https://github.com/playit-cloud/playit-minecraft-plugin/releases/latest/download/playit-minecraft-plugin.jar"
+            wget -P plugins "$PLAYIT_URL" || { echo "Failed to download Playit plugin."; exit 1; }
+
+            # Agree to EULA
+            echo "eula=true" > eula.txt
+
+            # Create server.properties file
+            create_server_properties "server.properties" "$ONLINE_MODE" "$ENFORCE_SECURE_PROFILE"
+
+            # Start server for the first time to generate necessary files
+            java -Xmx8G -jar "paper.jar" nogui
+
+            # Stop the server gracefully (manual intervention needed here)
+            echo "Please stop the server manually before continuing."
+
+            # Create start script
+            echo "#!/bin/bash
+            java -Xmx8G -jar paper.jar nogui
+            " > start.sh
+            chmod +x start.sh
+
+            echo "Minecraft Paper server installation complete!"
+
+            # Automatically start the server
+            echo "Starting the server..."
+            ./start.sh
+            break;;
+        [Ff]* )
+            SERVER_DIR="fabric_server"
+            if [ ! -d "$SERVER_DIR" ]; then
+                mkdir "$SERVER_DIR"
+            fi
+
+            # Change to server directory
+            cd "$SERVER_DIR"
+
+            # Function to download Fabric JAR and handle invalid links
+            download_fabric() {
+                local fabric_url="$1"
+                local fabric_jar=$(basename "$fabric_url")
+
+                download_file "$fabric_url" "$fabric_jar"
+            }
+
+            # Ask for Fabric download link
+            while true; do
+                read -p "Paste the Fabric download link: " FABRIC_URL
+                download_fabric "$FABRIC_URL"
+                break
+            done
+
+            # Ask if the server should be cracked
+            while true; do
+                read -p "Do you want your Minecraft server to be a cracked server? (y/n): " cracked_choice
+                case "$cracked_choice" in
+                    [Yy]* ) 
+                        ONLINE_MODE="false"
+                        ENFORCE_SECURE_PROFILE="false"
+                        create_server_properties "server.properties" "$ONLINE_MODE" "$ENFORCE_SECURE_PROFILE"
+                        break;;
+                    [Nn]* ) 
+                        ONLINE_MODE="true"
+                        ENFORCE_SECURE_PROFILE="true"
+                        break;;
+                    * ) echo "Please answer 'y' or 'n'.";;
+                esac
+            done
+
+            # Create eula.txt
+            echo "eula=true" > eula.txt
+
+            # Install Playit
+            curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
+            echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
+            sudo apt update
+            sudo apt install playit
+
+            # Create start script for Fabric
+            echo "#!/bin/bash
+            java -Xmx8G -jar $(basename "$FABRIC_URL") nogui
+            " > start.sh
+            chmod +x start.sh
+
+            echo "Minecraft Fabric server installation complete!"
+
+            # Automatically start the server
+            echo "Starting the server..."
+            ./start.sh
+            break;;
+        * ) echo "Please answer 'paper' or 'fabric'.";;
+    esac
+done
