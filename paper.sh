@@ -95,6 +95,20 @@ white-list=false
 EOL
 }
 
+# Function to handle valid input
+prompt_valid_input() {
+    local prompt_message="$1"
+    local response
+    while true; do
+        read -p "$prompt_message" response
+        case "$response" in
+            [Yy]* ) return 0;;  # Success
+            [Nn]* ) return 1;;  # Failure
+            * ) echo "Please answer 'y' or 'n'.";;
+        esac
+    done
+}
+
 # Ask user to select between Paper or Fabric
 while true; do
     read -p "Do you want to install 'paper' or 'fabric'? " server_type
@@ -118,28 +132,19 @@ while true; do
 
             # Ask if the user wants to provide a custom Paper download link
             while true; do
-                read -p "Do you want to provide a custom Paper download link? (y/n): " choice
-                case "$choice" in
-                    [Yy]* ) 
-                        read -p "Paste the Paper download link: " PAPER_URL
-                        download_paper "$PAPER_URL"
-                        break;;
-                    [Nn]* ) 
-                        while true; do
-                            read -p "Are you sure you want to install Paper version 1.21.1? (y/n): " confirm
-                            case "$confirm" in
-                                [Yy]* ) 
-                                    PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/40/downloads/paper-1.21.1-40.jar"
-                                    download_paper "$PAPER_URL"
-                                    break 2;; # Break out of both loops
-                                [Nn]* ) 
-                                    break;; # Go back to the initial custom link question
-                                * ) echo "Please answer 'y' or 'n'.";;
-                            esac
-                        done
-                        ;;
-                    * ) echo "Please answer 'y' or 'n'.";;
-                esac
+                prompt_valid_input "Do you want to provide a custom Paper download link? (y/n): " && {
+                    read -p "Paste the Paper download link: " PAPER_URL
+                    download_paper "$PAPER_URL"
+                    break
+                } || {
+                    while true; do
+                        prompt_valid_input "Are you sure you want to install Paper version 1.21.1? (y/n): " && {
+                            PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/40/downloads/paper-1.21.1-40.jar"
+                            download_paper "$PAPER_URL"
+                            break 2
+                        } || break
+                    done
+                }
             done
 
             # Ask if the user wants to add a plugin
@@ -148,49 +153,35 @@ while true; do
             fi
 
             while true; do
-                read -p "Do you want to add a plugin? (y/n): " add_plugin
-                case "$add_plugin" in
-                    [Yy]* ) 
-                        while true; do
-                            read -p "Paste the plugin download link: " PLUGIN_URL
-                            # Attempt to download the plugin
-                            PLUGIN_NAME="plugins/$(basename "$PLUGIN_URL")"
-                            download_file "$PLUGIN_URL" "$PLUGIN_NAME"
-                            if [ $? -eq 0 ]; then
-                                echo "Plugin downloaded successfully: $PLUGIN_NAME"
-                            else
-                                echo "Failed to download plugin. Please try again."
-                                continue
-                            fi
+                prompt_valid_input "Do you want to add a plugin? (y/n): " && {
+                    while true; do
+                        read -p "Paste the plugin download link: " PLUGIN_URL
+                        PLUGIN_NAME="plugins/$(basename "$PLUGIN_URL")"
+                        download_file "$PLUGIN_URL" "$PLUGIN_NAME"
+                        if [ $? -eq 0 ]; then
+                            echo "Plugin downloaded successfully: $PLUGIN_NAME"
+                        else
+                            echo "Failed to download plugin. Please try again."
+                            continue
+                        fi
 
-                            # Ask if the user wants to add another plugin
-                            read -p "Do you want to add another plugin? (y/n): " more_plugins
-                            case "$more_plugins" in
-                                [Nn]* ) break 2;; # Break out of both loops
-                                * ) echo "Please answer 'y' or 'n'.";;
-                            esac
-                        done
-                        ;;
-                    [Nn]* ) 
-                        break;;
-                    * ) echo "Please answer 'y' or 'n'.";;
-                esac
+                        # Ask if the user wants to add another plugin
+                        prompt_valid_input "Do you want to add another plugin? (y/n): " || break 2
+                    done
+                } || break
             done
 
             # Ask if the server should be cracked
             while true; do
-                read -p "Do you want your Minecraft server to be a cracked server? (y/n): " cracked_choice
-                case "$cracked_choice" in
-                    [Yy]* ) 
-                        ONLINE_MODE="false"
-                        ENFORCE_SECURE_PROFILE="false"
-                        break;;
-                    [Nn]* ) 
-                        ONLINE_MODE="true"
-                        ENFORCE_SECURE_PROFILE="true"
-                        break;;
-                    * ) echo "Please answer 'y' or 'n'.";;
-                esac
+                prompt_valid_input "Do you want your Minecraft server to be a cracked server? (y/n): " && {
+                    ONLINE_MODE="false"
+                    ENFORCE_SECURE_PROFILE="false"
+                    break
+                } || {
+                    ONLINE_MODE="true"
+                    ENFORCE_SECURE_PROFILE="true"
+                    break
+                }
             done
 
             # Download Playit plugin
@@ -247,18 +238,15 @@ while true; do
 
             # Ask if the server should be cracked
             while true; do
-                read -p "Do you want your Minecraft server to be a cracked server? (y/n): " cracked_choice
-                case "$cracked_choice" in
-                    [Yy]* ) 
-                        ONLINE_MODE="false"
-                        ENFORCE_SECURE_PROFILE="false"
-                        break;;
-                    [Nn]* ) 
-                        ONLINE_MODE="true"
-                        ENFORCE_SECURE_PROFILE="true"
-                        break;;
-                    * ) echo "Please answer 'y' or 'n'.";;
-                esac
+                prompt_valid_input "Do you want your Minecraft server to be a cracked server? (y/n): " && {
+                    ONLINE_MODE="false"
+                    ENFORCE_SECURE_PROFILE="false"
+                    break
+                } || {
+                    ONLINE_MODE="true"
+                    ENFORCE_SECURE_PROFILE="true"
+                    break
+                }
             done
 
             # Create eula.txt
@@ -279,32 +267,22 @@ while true; do
             fi
 
             while true; do
-                read -p "Do you want to add a mod? (y/n): " add_mod
-                case "$add_mod" in
-                    [Yy]* ) 
-                        while true; do
-                            read -p "Paste the mod download link: " MOD_URL
-                            MOD_NAME="mods/$(basename "$MOD_URL")"
-                            download_file "$MOD_URL" "$MOD_NAME"
-                            if [ $? -eq 0 ]; then
-                                echo "Mod downloaded successfully: $MOD_NAME"
-                            else
-                                echo "Failed to download mod. Please try again."
-                                continue
-                            fi
+                prompt_valid_input "Do you want to add a mod? (y/n): " && {
+                    while true; do
+                        read -p "Paste the mod download link: " MOD_URL
+                        MOD_NAME="mods/$(basename "$MOD_URL")"
+                        download_file "$MOD_URL" "$MOD_NAME"
+                        if [ $? -eq 0 ]; then
+                            echo "Mod downloaded successfully: $MOD_NAME"
+                        else
+                            echo "Failed to download mod. Please try again."
+                            continue
+                        fi
 
-                            # Ask if the user wants to add another mod
-                            read -p "Do you want to add another mod? (y/n): " more_mods
-                            case "$more_mods" in
-                                [Nn]* ) break 2;; # Break out of both loops
-                                * ) echo "Please answer 'y' or 'n'.";;
-                            esac
-                        done
-                        ;;
-                    [Nn]* ) 
-                        break;;
-                    * ) echo "Please answer 'y' or 'n'.";;
-                esac
+                        # Ask if the user wants to add another mod
+                        prompt_valid_input "Do you want to add another mod? (y/n): " || break 2
+                    done
+                } || break
             done
 
             # Create start script for Fabric
