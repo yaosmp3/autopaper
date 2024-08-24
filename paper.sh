@@ -21,80 +21,6 @@ if ! command -v java &> /dev/null; then
     exit 1
 fi
 
-# Function to create server.properties
-create_server_properties() {
-    local file_path="$1"
-    local online_mode="$2"
-    local enforce_secure_profile="$3"
-
-    cat <<EOL > "$file_path"
-#Minecraft server properties
-#Sat Aug 24 05:45:45 UTC 2024
-accepts-transfers=false
-allow-flight=false
-allow-nether=true
-broadcast-console-to-ops=true
-broadcast-rcon-to-ops=true
-bug-report-link=
-debug=false
-difficulty=hard
-enable-command-block=false
-enable-jmx-monitoring=false
-enable-query=false
-enable-rcon=false
-enable-status=true
-enforce-secure-profile=$enforce_secure_profile
-enforce-whitelist=false
-entity-broadcast-range-percentage=100
-force-gamemode=false
-function-permission-level=2
-gamemode=survival
-generate-structures=true
-generator-settings={}
-hardcore=false
-hide-online-players=false
-initial-disabled-packs=
-initial-enabled-packs=vanilla
-level-name=world
-level-seed=
-level-type=minecraft\:normal
-log-ips=true
-max-chained-neighbor-updates=1000000
-max-players=20
-max-tick-time=60000
-max-world-size=29999984
-motd=A Minecraft Server
-network-compression-threshold=256
-online-mode=$online_mode
-op-permission-level=4
-player-idle-timeout=0
-prevent-proxy-connections=false
-pvp=true
-query.port=25565
-rate-limit=0
-rcon.password=
-rcon.port=25575
-region-file-compression=deflate
-require-resource-pack=false
-resource-pack=
-resource-pack-id=
-resource-pack-prompt=
-resource-pack-sha1=
-server-ip=
-server-port=25565
-simulation-distance=10
-spawn-animals=true
-spawn-monsters=true
-spawn-npcs=true
-spawn-protection=16
-sync-chunk-writes=true
-text-filtering-config=
-use-native-transport=true
-view-distance=20
-white-list=false
-EOL
-}
-
 # Ask user to select between Paper or Fabric
 while true; do
     read -p "Do you want to install 'paper' or 'fabric'? " server_type
@@ -171,7 +97,72 @@ while true; do
             echo "eula=true" > eula.txt
 
             # Create server.properties file
-            create_server_properties "server.properties" "$ONLINE_MODE" "$ENFORCE_SECURE_PROFILE"
+            cat <<EOL > server.properties
+#Minecraft server properties
+#Sat Aug 24 05:45:45 UTC 2024
+accepts-transfers=false
+allow-flight=false
+allow-nether=true
+broadcast-console-to-ops=true
+broadcast-rcon-to-ops=true
+bug-report-link=
+debug=false
+difficulty=hard
+enable-command-block=false
+enable-jmx-monitoring=false
+enable-query=false
+enable-rcon=false
+enable-status=true
+enforce-secure-profile=$ENFORCE_SECURE_PROFILE
+enforce-whitelist=false
+entity-broadcast-range-percentage=100
+force-gamemode=false
+function-permission-level=2
+gamemode=survival
+generate-structures=true
+generator-settings={}
+hardcore=false
+hide-online-players=false
+initial-disabled-packs=
+initial-enabled-packs=vanilla
+level-name=world
+level-seed=
+level-type=minecraft\:normal
+log-ips=true
+max-chained-neighbor-updates=1000000
+max-players=20
+max-tick-time=60000
+max-world-size=29999984
+motd=A Minecraft Server
+network-compression-threshold=256
+online-mode=$ONLINE_MODE
+op-permission-level=4
+player-idle-timeout=0
+prevent-proxy-connections=false
+pvp=true
+query.port=25565
+rate-limit=0
+rcon.password=
+rcon.port=25575
+region-file-compression=deflate
+require-resource-pack=false
+resource-pack=
+resource-pack-id=
+resource-pack-prompt=
+resource-pack-sha1=
+server-ip=
+server-port=25565
+simulation-distance=10
+spawn-animals=true
+spawn-monsters=true
+spawn-npcs=true
+spawn-protection=16
+sync-chunk-writes=true
+text-filtering-config=
+use-native-transport=true
+view-distance=20
+white-list=false
+EOL
 
             # Start server for the first time to generate necessary files
             java -Xmx8G -jar "paper.jar" nogui
@@ -222,7 +213,6 @@ while true; do
                     [Yy]* ) 
                         ONLINE_MODE="false"
                         ENFORCE_SECURE_PROFILE="false"
-                        create_server_properties "server.properties" "$ONLINE_MODE" "$ENFORCE_SECURE_PROFILE"
                         break;;
                     [Nn]* ) 
                         ONLINE_MODE="true"
@@ -235,24 +225,55 @@ while true; do
             # Create eula.txt
             echo "eula=true" > eula.txt
 
-            # Install Playit
-            curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
-            echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
-            sudo apt update
-            sudo apt install playit
-
-            # Create start script for Fabric
-            echo "#!/bin/bash
-            java -Xmx8G -jar $(basename "$FABRIC_URL") nogui
-            " > start.sh
-            chmod +x start.sh
-
-            echo "Minecraft Fabric server installation complete!"
-
-            # Automatically start the server
-            echo "Starting the server..."
-            ./start.sh
-            break;;
-        * ) echo "Please answer 'paper' or 'fabric'.";;
-    esac
-done
+            # Create server.properties file
+            cat <<EOL > server.properties
+#Minecraft server properties
+#Sat Aug 24 05:45:45 UTC 2024
+accepts-transfers=false
+allow-flight=false
+allow-nether=true
+broadcast-console-to-ops=true
+broadcast-rcon-to-ops=true
+bug-report-link=
+debug=false
+difficulty=hard
+enable-command-block=false
+enable-jmx-monitoring=false
+enable-query=false
+enable-rcon=false
+enable-status=true
+enforce-secure-profile=$ENFORCE_SECURE_PROFILE
+enforce-whitelist=false
+entity-broadcast-range-percentage=100
+force-gamemode=false
+function-permission-level=2
+gamemode=survival
+generate-structures=true
+generator-settings={}
+hardcore=false
+hide-online-players=false
+initial-disabled-packs=
+initial-enabled-packs=vanilla
+level-name=world
+level-seed=
+level-type=minecraft\:normal
+log-ips=true
+max-chained-neighbor-updates=1000000
+max-players=20
+max-tick-time=60000
+max-world-size=29999984
+motd=A Minecraft Server
+network-compression-threshold=256
+online-mode=$ONLINE_MODE
+op-permission-level=4
+player-idle-timeout=0
+prevent-proxy-connections=false
+pvp=true
+query.port=25565
+rate-limit=0
+rcon.password=
+rcon.port=25575
+region-file-compression=deflate
+require-resource-pack=false
+resource-pack=
+resource-pack-id
