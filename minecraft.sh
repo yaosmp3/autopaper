@@ -44,7 +44,8 @@ wget -P plugins "$PLAYIT_URL"
 echo "eula=true" > eula.txt
 
 # Start server for the first time to generate necessary files
-java -Xms1G -Xmx1G -jar "paper.jar" nogui
+# Use the specified JVM arguments here as well
+java -Xmx8G -jar "paper.jar" nogui
 
 # Stop the server
 echo "stop" > server.console
