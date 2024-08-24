@@ -264,6 +264,9 @@ while true; do
             # Create eula.txt
             echo "eula=true" > eula.txt
 
+            # Create server.properties file in Fabric server directory
+            create_server_properties "server.properties" "$ONLINE_MODE" "$ENFORCE_SECURE_PROFILE"
+
             # Install Playit
             curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
             echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
