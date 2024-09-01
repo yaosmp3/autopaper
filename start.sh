@@ -2,16 +2,18 @@
 
 # Define the server folder names
 MINECRAFT_SERVER="minecraft_server"
-FABRIC_SERVER="fabric_servers"
-PAPER_JAR="paper.jar"
+FABRIC_SERVER="fabric_server"
+PAPER_JAR="paper"
+FABRIC_JAR="fabric-server.jar" 
 MEMORY="8G"
 
 # Function to start the server
 start_server() {
     local server_folder=$1
+    local server_jar=$2 
     echo "Starting server in $server_folder..."
-    cd "$server_folder"
-    java -Xmx$MEMORY -jar $PAPER_JAR
+    cd "$server_folder" || { echo "Error: Failed to cd into $server_folder"; exit 1; } # cd and handle error
+    java -Xmx$MEMORY -jar $server_jar
 }
 
 # Ask the user which server to start
@@ -22,7 +24,7 @@ while true; do
     case $server_choice in
         paper)
             if [ -d "$MINECRAFT_SERVER" ]; then
-                start_server "$MINECRAFT_SERVER"
+                start_server "$MINECRAFT_SERVER" "$PAPER_JAR" 
             else
                 echo "Error: minecraft_server folder not found!"
             fi
@@ -30,9 +32,9 @@ while true; do
             ;;
         fabric)
             if [ -d "$FABRIC_SERVER" ]; then
-                start_server "$FABRIC_SERVER"
+                start_server "$FABRIC_SERVER" "$FABRIC_JAR" 
             else
-                echo "Error: fabric_servers folder not found!"
+                echo "Error: fabric_server folder not found!"
             fi
             break
             ;;
