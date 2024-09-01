@@ -122,30 +122,35 @@ while true; do
             # Change to server directory
             cd "$SERVER_DIR"
         
-            # Function to download Paper JAR and handle invalid links
+            # Function to download Paper JAR
             download_paper() {
-                local paper_url="$1"
-                local paper_jar=$(basename "$paper_url")
+                # Ask for the Minecraft version
+                read -p "Enter the Minecraft version you want (e.g., 1.21.1): " mc_version
 
-                download_file "$paper_url" "paper.jar"
+                # Define the base URL for PaperMC API
+                base_url="https://api.papermc.io/v2/projects/paper/versions/${mc_version}/builds/"
+
+                # Fetch the build information from the API silently
+                response=$(curl -s "${base_url}")
+
+                # Extract the latest build number from the response
+                build_number=$(echo "$response" | grep -oP '"build":\K\d+' | head -n 1)
+
+                if [ -z "$build_number" ]; then
+                    echo "Failed to find the latest build number. Please check the version or try again later."
+                    exit 1
+                fi
+
+                # Construct the download URL
+                download_url="https://api.papermc.io/v2/projects/paper/versions/${mc_version}/builds/${build_number}/downloads/paper-${mc_version}-${build_number}.jar"
+
+                # Download the file using curl silently and rename it to paper.jar
+                curl -s -o "paper.jar" "$download_url"
+
+                echo "Downloaded from: $download_url"
             }
 
-            # Ask if the user wants to provide a custom Paper download link
-            while true; do
-                prompt_valid_input "Do you want to provide a custom Paper download link? (y/n): " && {
-                    read -p "Paste the Paper download link: " PAPER_URL
-                    download_paper "$PAPER_URL"
-                    break
-                } || {
-                    while true; do
-                        prompt_valid_input "Are you sure you want to install Paper version 1.21.1? (y/n): " && {
-                            PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/40/downloads/paper-1.21.1-40.jar"
-                            download_paper "$PAPER_URL"
-                            break 2
-                        } || break
-                    done
-                }
-            done
+            download_paper
 
             # Ask if the user wants to add a plugin
             if [ ! -d "plugins" ]; then
@@ -221,20 +226,22 @@ while true; do
             # Change to server directory
             cd "$SERVER_DIR"
 
-            # Function to download Fabric JAR and handle invalid links
-            download_fabric() {
-                local fabric_url="$1"
-                local fabric_jar=$(basename "$fabric_url")
+            # Ask for the Minecraft version
+            read -p "Enter the Minecraft version you want (e.g., 1.21.1): " mc_version
 
-                download_file "$fabric_url" "$fabric_jar"
-            }
+            # Fetch the first 10 lines from the loader versions JSON
+            json_data=$(curl -s "https://meta.fabricmc.net/v2/versions/loader" | head -n 10)
 
-            # Ask for Fabric download link
-            while true; do
-                read -p "Paste the Fabric download link: " FABRIC_URL
-                download_fabric "$FABRIC_URL"
-                break
-            done
+            # Extract the latest maven version (e.g., 0.16.3)
+            maven_version=$(echo $json_data | grep -oP '"maven":\s*".*?:\K\d+\.\d+\.\d+' | head -n 1)
+
+            # Construct the final download URL
+            final_url="https://meta.fabricmc.net/v2/versions/loader/${mc_version}/${maven_version}/1.0.1/server/jar"
+
+            # Download the file using curl and rename it to fabric-server.jar
+            curl -s -o "fabric-server.jar" "$final_url"
+
+            echo "Downloaded from: $final_url"
 
             # Ask if the server should be cracked
             while true; do
@@ -256,38 +263,14 @@ while true; do
             create_server_properties "server.properties" "$ONLINE_MODE" "$ENFORCE_SECURE_PROFILE"
 
             # Install Playit
-            curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
-            echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
-            sudo apt update
-            sudo apt install playit
+            curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor > /usr/share/keyrings/playit-archive-keyring.gpg
+            echo "deb [signed-by=/usr/share/keyrings/playit-archive-keyring.gpg] https://playit-cloud.github.io/ppa/ stable main" | tee /etc/apt/sources.list.d/playit.list
+            apt-get update
+            apt-get install -y playit
 
-            # Ask if the user wants to add a mod
-            if [ ! -d "mods" ]; then
-                mkdir "mods"
-            fi
-
-            while true; do
-                prompt_valid_input "Do you want to add a mod? (y/n): " && {
-                    while true; do
-                        read -p "Paste the mod download link: " MOD_URL
-                        MOD_NAME="mods/$(basename "$MOD_URL")"
-                        download_file "$MOD_URL" "$MOD_NAME"
-                        if [ $? -eq 0 ]; then
-                            echo "Mod downloaded successfully: $MOD_NAME"
-                        else
-                            echo "Failed to download mod. Please try again."
-                            continue
-                        fi
-
-                        # Ask if the user wants to add another mod
-                        prompt_valid_input "Do you want to add another mod? (y/n): " || break 2
-                    done
-                } || break
-            done
-
-            # Create start script for Fabric
+            # Create start script for Fabric server
             echo "#!/bin/bash
-            java -Xmx8G -jar $(basename "$FABRIC_URL") nogui
+            java -Xmx8G -jar fabric-server.jar nogui
             " > start.sh
             chmod +x start.sh
 
@@ -297,6 +280,6 @@ while true; do
             echo "Starting the server..."
             ./start.sh
             break;;
-        * ) echo "Please answer 'paper' or 'fabric'.";;
+        * ) echo "Invalid option. Please enter 'paper' or 'fabric'.";;
     esac
 done
