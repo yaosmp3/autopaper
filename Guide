@@ -1,7 +1,17 @@
-If you want to install a minecraft server, paper or fabric. run the command "bash paper.sh" in terminal. the jarfile link for paper is in papermc.io and the jarfile for fabric is in fabricmc.net.
+If you want to install a minecraft server, paper or fabric. run the command "bash paper.sh" in terminal. and type in a valid version from that specific loader..
 
-if you want to install mods, run the command "bash mods.sh" and it will give you the option to install paper plugins or fabric mods. and will also give you the option to name the file with the download link of the mods. if you want to install mods or plugins, go to mondrinth.com
+if you want to install mods, run the command "bash mods.sh" and it will give you the option to either put in a file name with the mods download links, or paste in the download link manually.
 
-Note: if you want to start aa tunnel for the fabric server, open a new terminal and type the command "playit"
+Note: if you want to start aa tunnel for the fabric server, open a new terminal and type the command "playit" (optional, download the fabric playit mod instead.)
 
-If you want to update the jarfiles, type "bash update.sh" in terminal and choose what you want to update and paste the valid download links.
+If you want to update the jarfiles, type "bash update.sh" in terminal and type in a valid fabric loader version.
+
+if you want to configure your fabric playit agentkey, type "bash agent.sh" in the terminal and paste in your agent key. (ill update it to be able to work on paper)
+
+DEPENDENCIES: curl, grep, bash, wget (optional), and jq.
+
+sudo apt-get install curl
+sudo apt-get install grep
+sudo apt-get install bash
+sudo apt-get install wget
+sudo apt-get install jq
