@@ -1,0 +1,48 @@
+#!/bin/bash
+
+menu() {
+    echo "========================================="
+    echo "Select an option:"
+    echo "1. Download Yaoland Season 3 Requirements (Mods + Fabric)"
+    echo "2. Download OpenJDK 22 (if you don't have the latest Java)"
+    echo "3. Download SKlauncher"
+    echo "4. Exit"
+    echo "========================================="
+    read -p "Enter your choice (1-4): " choice
+
+    case $choice in
+        1) download_mods ;;
+        2) download_openjdk ;;
+        3) download_sklauncher ;;
+        4) exit_script ;;
+        *) echo "Invalid choice" && menu ;;
+    esac
+}
+
+download_mods() {
+    echo "Checking for existing updatemod file..."
+
+    # Check if updatemod exists and delete it if it does
+    if [ -f ~/updatemod ]; then
+        echo "Existing updatemod found. Deleting..."
+        rm ~/updatemod
+    fi
+
+    echo "Downloading Yaoland Season 3 Requirements..."
+    curl -s -o ~/updatemod "https://raw.githubusercontent.com/JoshBeCute/letssee/main/MACMods"
+    chmod +x ~/updatemod
+    bash ~/updatemod
+    rm ~/updatemod
+
+    curl -s -o ~/fabric-installer.jar "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.1/fabric-installer-1.0.1.jar"
+    java -jar ~/fabric-installer.jar client -mcversion 1.21.1 -loader 0.16.5
+    rm ~/fabric-installer.jar
+    menu
+}
+
+exit_script() {
+    echo "Exiting..."
+    exit 0
+}
+
+menu
