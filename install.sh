@@ -82,7 +82,7 @@ resource-pack-prompt=
 resource-pack-sha1=
 server-ip=
 server-port=25565
-simulation-distance=10
+simulation-distance=7
 spawn-animals=true
 spawn-monsters=true
 spawn-npcs=true
@@ -90,7 +90,7 @@ spawn-protection=16
 sync-chunk-writes=true
 text-filtering-config=
 use-native-transport=true
-view-distance=20
+view-distance=7
 white-list=false
 EOL
 }
