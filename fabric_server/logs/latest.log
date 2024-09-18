@@ -1,12 +1,12 @@
-[21:49:31] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.16.5
-[21:49:32] [main/WARN]: Warnings were found!
+[13:43:48] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.16.5
+[13:43:49] [main/WARN]: Warnings were found!
  - Mod 'Alloy Forgery' (alloy_forgery) 2.4.1+1.21 recommends version 14.0.0 or later of roughlyenoughitems, which is missing!
 	 - You should install version 14.0.0 or later of roughlyenoughitems for the optimal experience.
  - Mod 'Forge Config API Port' (forgeconfigapiport) 21.1.0 recommends any version of modmenu, which is missing!
 	 - You should install any version of modmenu for the optimal experience.
  - Mod 'Revert Stackable Curing Discount' (rscd) 1.0.0 recommends any version of modmenu, which is missing!
 	 - You should install any version of modmenu for the optimal experience.
-[21:49:32] [main/INFO]: Loading 193 mods:
+[13:43:49] [main/INFO]: Loading 195 mods:
 	- additionalstructures 5.0.0-fabric
 	- advancednetherite 2.1.6-1.21.1
 	- alloy_forgery 2.4.1+1.21
@@ -137,8 +137,10 @@
 	- java 21
 	- konkrete 1.9.9
 	- ksyxis 1.3.2
+	- leavesbegone 21.1.0
 	- lithium 0.13.0
 	- minecraft 1.21.1
+	- modernfix 5.19.3+mc1.21.1
 	- mr_dungeons_andtaverns 1-v4.3
 	- mr_keep_someinventory 1-v2.0.1
 	- mythicmetals 0.20.1+1.21
@@ -161,7 +163,7 @@
 	   |-- polymer-autohost 0.9.12+1.21.1
 	   |    \-- io_netty_netty-codec-http 4.1.82
 	   \-- polymer-blocks 0.9.12+1.21.1
-	- puzzleslib 21.1.3
+	- puzzleslib 21.1.8
 	- resourcefulconfig 3.0.3
 	- rscd 1.0.0
 	- servercore 1.5.5+1.21.1
@@ -222,391 +224,690 @@
 	- yungsapi 1.21-Fabric-5.0.0
 	   |-- org_javassist_javassist 3.29.2-GA
 	   \-- org_reflections_reflections 0.10.2
-[21:49:32] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/workspaces/autopaper/fabric_server/libraries/net/fabricmc/sponge-mixin/0.15.3+mixin.0.8.7/sponge-mixin-0.15.3+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
-[21:49:32] [main/INFO]: Compatibility level set to JAVA_21
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.base.mixin
-[21:49:33] [main/INFO]: Global Executor Parallelism: 1 configured, 1 evaluated, 1 default evaluated
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.fixes.chunkio.threading_issues.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.fixes.general.threading_issues.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.fixes.worldgen.threading_issues.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.fixes.worldgen.vanilla_bugs.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.notickvd.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.opts.allocs.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.opts.chunk_access.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.opts.chunkio.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.opts.math.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.opts.scheduling.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.opts.worldgen.general.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.opts.worldgen.vanilla.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.rewrites.chunk_serializer.mixin
-[21:49:33] [main/INFO]: Disabling config ioSystem.gcFreeChunkSerializer: Incompatible with architectury@13.0.6 (*) (defined in c2me)
-[21:49:33] [main/INFO]: Disabling com.ishland.c2me.rewrites.chunk_serializer.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.rewrites.chunksystem.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.rewrites.chunkio.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.server.utils.mixin
-[21:49:33] [main/INFO]: Initializing com.ishland.c2me.threading.lighting.mixin
-[21:49:33] [main/WARN]: Reference map 'deathfinder.fabric.refmap.json' for deathfinder.fabric.mixins.json could not be read. If this is a development environment you can ignore this message
-[21:49:33] [main/WARN]: Reference map 'forgeconfigapiport.common.refmap.json' for forgeconfigapiport.common.mixins.json could not be read. If this is a development environment you can ignore this message
-[21:49:33] [main/WARN]: Mod 'c2me' attempted to override option 'mixin.world.player_chunk_tick', which doesn't exist, ignoring
-[21:49:33] [main/INFO]: Loaded configuration file for Lithium: 144 options available, 2 override(s) found
-[21:49:33] [main/INFO]: Successfully started async appender with [ServerGuiConsole, SysOut, File]
-[21:49:33] [main/WARN]: Error loading class: ca/spottedleaf/starlight/common/thread/SchedulingUtil (java.lang.ClassNotFoundException: ca/spottedleaf/starlight/common/thread/SchedulingUtil)
-[21:49:34] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
-[21:49:34] [main/WARN]: Force-disabling mixin 'alloc.chunk_ticking.ServerChunkManagerMixin' as rule 'mixin.alloc.chunk_ticking' (added by mods [servercore]) disables it and children
-[21:49:34] [main/WARN]: Error loading class: net/minecraft/class_287 (java.lang.ClassNotFoundException: net/minecraft/class_287)
-[21:49:34] [main/WARN]: @Mixin target net.minecraft.class_287 was not found owo.mixins.json:BufferBuilderAccessor from mod owo
-[21:49:34] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
-[21:49:34] [main/WARN]: @Mixin target net.minecraft.class_437 was not found owo.mixins.json:ScreenAccessor from mod owo
-[21:49:34] [main/WARN]: Error loading class: com/simibubi/create/content/kinetics/base/BlockBreakingKineticBlockEntity (java.lang.ClassNotFoundException: com/simibubi/create/content/kinetics/base/BlockBreakingKineticBlockEntity)
-[21:49:34] [main/WARN]: Error loading class: net/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry$TexturedModelDataProvider (java.lang.ClassNotFoundException: net/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry$TexturedModelDataProvider)
-[21:49:35] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[21:49:43] [main/INFO]: Initializing platform helper for Advanced Netherite!
-[21:49:44] [main/INFO]: =^..^=    BetterNether for 1.21    =^..^=
-[21:49:44] [main/INFO]: Loading Collective version 7.84.
-[21:49:44] [main/INFO]: Constructing common components for deathfinder:main
-[21:49:45] [Cicada thread 0/INFO]: [cicada] Hello, anyone there?
-[21:49:45] [Cicada thread 0/INFO]: [MythicMetals] A Cicada? Free Gray Dye...
-[21:49:45] [main/INFO]: [KONKRETE] Loading v1.9.9 in server-side mode on FABRIC!
-[21:49:45] [main/INFO]: ---------------------------
-[21:49:45] [main/INFO]: KONKRETE SHIPS AND USES THE FOLLOWING LIBRARIES:
-[21:49:45] [main/INFO]:  
-[21:49:45] [main/INFO]: Open Imaging Copyright © 2014 Dhyan Blum.
-[21:49:45] [main/INFO]: Open Imaging is licensed under Apache-2.0.
-[21:49:45] [main/INFO]:  
-[21:49:45] [main/INFO]: JsonPath Copyright © 2017 Jayway.
-[21:49:45] [main/INFO]: JsonPath is licensed under Apache-2.0.
-[21:49:45] [main/INFO]:  
-[21:49:45] [main/INFO]: Json-smart Copyright © netplex.
-[21:49:45] [main/INFO]: Json-smart is licensed under Apache-2.0.
-[21:49:45] [main/INFO]:  
-[21:49:45] [main/INFO]: Exp4j Copyright © Frank Asseg.
-[21:49:45] [main/INFO]: Exp4j is licensed under Apache-2.0. https://github.com/fasseg/exp4j
-[21:49:45] [main/INFO]: ---------------------------
-[21:49:45] [main/INFO]: [KONKRETE] Server-side modules initialized and ready to use!
-[21:49:45] [main/INFO]: Ksyxis: Booting... (platform: Fabric, manual: false)
-[21:49:45] [main/INFO]: Ksyxis: Found Mixin library. (version: 0.8.7)
-[21:49:45] [main/INFO]: Ksyxis: Ready. As always, this mod will speed up your world loading and might or might not break it.
-[21:49:45] [main/INFO]: [Mythic Metals] Terralith detected. Please go over the config and disable Overworld Nether Ores
-[21:49:45] [main/INFO]: [Mythic Metals] Many ores spawn in unexpected ways due to the new overworld. Modpack devs, take note of this
-[21:49:45] [main/INFO]: [Mythic Metals] Mythic Metals is now initialized.
-[21:49:45] [main/INFO]: Registering Effects...
-[21:49:45] [main/INFO]: Registering Mythic Items for mythicupgrades
-[21:49:45] [main/INFO]: Registering Mythic Blocks for mythicupgrades
-[21:49:45] [main/INFO]: Mythic Upgrades works properly! CAN, ANNENE SELAMLAR KARDESIM! <3
-[21:49:45] [main/INFO]: Chase your dreams, no matter the cost. Don't wait for invitations, take action. Making a decision, starting something - that's half the battle of achieving success.
-[21:49:46] [main/INFO]: There is a 1% chance that instead of Frog, you get Froge!
-[21:49:46] [main/INFO]: Packet Fixer has been initialized successfully
-[21:49:46] [main/INFO]: Constructing common components for puzzleslib:main
-[21:49:46] [main/INFO]: [ServerCore] Loaded V1.5.5+1.21.1!
-[21:49:46] [main/INFO]: Registered the FluidEffect with Unique ID of minecraft:water for minecraft:water 81000 with the ID 0
-[21:49:46] [main/INFO]: Registered the FluidEffect with Unique ID of minecraft:lava for minecraft:lava 81000 with the ID 1
-[21:49:46] [main/INFO]: Registered the FluidEffect with Unique ID of travelersbackpack:potion for travelersbackpack:potion_still 27000 with the ID 2
-[21:49:46] [main/INFO]: Registered the FluidEffect with Unique ID of travelersbackpack:milk for travelersbackpack:milk_still 81000 with the ID 3
-[21:49:47] [main/INFO]: Reflections took 64 ms to scan 1 urls, producing 1 keys and 3 values
-[21:49:47] [main/INFO]: Reflections took 4 ms to scan 1 urls, producing 1 keys and 3 values
-[21:49:47] [main/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[21:49:47] [main/INFO]: Ignoring Patch{ModCore: bclib (bclib):3.0.11:196619}
-[21:49:47] [main/INFO]: Ignoring Patch{ModCore: betternether (betternether):5.3.5:328453}
-[21:49:47] [main/INFO]: Ignoring Patch{ModCore: betternether (betternether):8.2.2:524802}
-[21:49:47] [main/INFO]: Ignoring Patch{ModCore: betternether (betternether):9.0.1:589825}
-[21:49:47] [main/INFO]: Running Pre Patchers on ./world/.
-[21:49:47] [main/INFO]: Everything up to date
-[21:49:47] [main/WARN]: Missing metadata in pack file/All The Minecraft Music-DP 1.1.zip
-[21:49:47] [main/INFO]: Processing wover.datapack.registry Entrypoints
-[21:49:47] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.BiomeDatapackRegistryEntrypoint
-[21:49:47] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.FeatureDatapackRegistryEntrypoint
-[21:49:47] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.ItemDatapackRegistryEntrypoint
-[21:49:47] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.StructureDatapackRegistryEntrypoint
-[21:49:47] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.SurfaceDatapackRegistryEntrypoint
-[21:49:48] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (3f29704a)
-[21:49:48] [main/INFO]: Unable to build Biome List yet
-[21:49:48] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
-[21:49:48] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (93946df)
-[21:49:48] [main/INFO]: Unable to build Biome List yet
-[21:49:48] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
-[21:49:48] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (21a625da)
-[21:49:48] [main/INFO]: Unable to build Biome List yet
-[21:49:48] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
-[21:49:48] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (7c441770)
-[21:49:48] [main/INFO]: Unable to build Biome List yet
-[21:49:48] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
-[21:49:48] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (1012c41b)
-[21:49:48] [main/INFO]: Unable to build Biome List yet
-[21:49:48] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
-[21:49:48] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (5843d079)
-[21:49:48] [main/INFO]: Unable to build Biome List yet
-[21:49:48] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:amber_land
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:amber_land
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:blossoming_spires
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:blossoming_spires
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:bone_reef (class_4762[temperature=-100, humidity=-500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:chorus_forest
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:crimson_glowing_woods (class_4762[temperature=4000, humidity=-500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:crimson_pinewood (class_4762[temperature=3500, humidity=1000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:crystal_mountains
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:crystal_mountains
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dragon_graveyards
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dragon_graveyards
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dry_shrubland
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dry_shrubland
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dust_wastelands
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:flooded_deltas (class_4762[temperature=-3000, humidity=-100, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1750])
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:foggy_mushroomland
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:foggy_mushroomland
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:glowing_grasslands
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:glowing_grasslands
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:gravel_desert (class_4762[temperature=-1000, humidity=1000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=2000])
-[21:49:49] [main/INFO]: Adding Small End Island Biome to Fabric: betterend:ice_starfield
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:lantern_woods
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:lantern_woods
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:magma_land (class_4762[temperature=8000, humidity=-7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake_grove
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake_grove
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:neon_oasis
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:neon_oasis
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_grasslands (class_4762[temperature=0, humidity=7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_jungle (class_4762[temperature=5000, humidity=8000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_mushroom_forest (class_4762[temperature=0, humidity=7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_mushroom_forest_edge (class_4762[temperature=0, humidity=7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_swampland (class_4762[temperature=1000, humidity=8000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_swampland_terraces (class_4762[temperature=800, humidity=8500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:old_fungiwoods (class_4762[temperature=0, humidity=6500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:old_swampland (class_4762[temperature=1000, humidity=7500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:old_warped_woods (class_4762[temperature=0, humidity=5500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=3750])
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:painted_mountains
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:painted_mountains
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:poor_nether_grasslands (class_4762[temperature=0, humidity=3000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:shadow_forest
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:shadow_forest
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:soul_plain (class_4762[temperature=100, humidity=-5000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:sulfuric_bone_reef (class_4762[temperature=0, humidity=6000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=3700])
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:sulphur_springs
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:sulphur_springs
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbra_valley
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbra_valley
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbrella_jungle
-[21:49:49] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbrella_jungle
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:upside_down_forest (class_4762[temperature=4500, humidity=8000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1250])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:upside_down_forest_cleared (class_4762[temperature=4500, humidity=3000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1250])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:wart_forest (class_4762[temperature=-5000, humidity=5000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Adding Nether Biome to Fabric: betternether:wart_forest_edge (class_4762[temperature=-5000, humidity=4500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
-[21:49:49] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (664c4739)
-[21:49:49] [main/INFO]: Unable to build Biome List yet
-[21:49:49] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
-[21:49:49] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (3cf0372)
-[21:49:49] [main/INFO]: Unable to build Biome List yet
-[21:49:49] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
-[21:49:49] [Worker-Main-3/ERROR]: Unable to building bartering table
-[21:49:50] [Worker-Main-3/INFO]: registered playit command
-[21:49:50] [main/INFO]: Disabling Recipe: bclib:test_star
-[21:49:50] [main/INFO]: Loaded 3854 recipes
-[21:49:50] [main/INFO]: Added 0 recipes in 1ms
-[21:49:51] [main/ERROR]: Couldn't load advancements: [nova_structures:adventure/find_shrine, minecraft:give_quest_trader_trade, minecraft:wander_add_map]
-[21:49:51] [main/INFO]: Loaded 3467 advancements
-[21:49:51] [ForkJoinPool.commonPool-worker-1/INFO]: Loaded 58 translation keys
-[21:49:51] [main/INFO]: Reloading grave shape (server)
-[21:49:51] [main/INFO]: Grave model and shape reload successful (server)
-[21:49:51] [main/INFO]: Reloading YIGD graveyard data (server)
-[21:49:51] [main/INFO]: Graveyard data successfully reloaded (server)
-[21:49:51] [main/INFO]: Reloading YIGD grave area overrides (server)
-[21:49:51] [main/INFO]: Grave area overrides successfully reloaded (server)
-[21:49:51] [main/WARN]: Not all defined tags for registry ResourceKey[minecraft:root / minecraft:item] are present in data pack: minecraft:enchantable/empty
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseOreBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betternether.blocks.RedstoneOreBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.basis.StoneLanternBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.BrimstoneBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_638. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.TenaneaFlowersBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.HelixTreeLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.JellyshroomCapBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.HydraluxPetalColoredBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseOreBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.BulbVineLanternColoredBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.AuroraCrystalBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.RespawnObeliskBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.EndPortalBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (6e4f2e0b)
-[21:49:52] [main/INFO]: Added 5 Biomes
-[21:49:52] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
-[21:49:52] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
-[21:49:52] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
-[21:49:52] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (4f52f)
-[21:49:52] [main/INFO]: Added 11 Biomes
-[21:49:52] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_swampland, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:soul_plain, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
-[21:49:52] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
-[21:49:52] [main/INFO]: Added Tags for 1 fabric biomes in 21.05 ms
-[21:49:52] [main/INFO]: Added 6 biomes to wover:is_end/highland in 2.427 ms
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (6e4f2e0b)
-[21:49:52] [main/INFO]: Added 5 Biomes
-[21:49:52] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
-[21:49:52] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
-[21:49:52] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (664c4739)
-[21:49:52] [main/INFO]: Added 5 Biomes
-[21:49:52] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
-[21:49:52] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
-[21:49:52] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (664c4739)
-[21:49:52] [main/INFO]: Added 5 Biomes
-[21:49:52] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
-[21:49:52] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
-[21:49:52] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (4f52f)
-[21:49:52] [main/INFO]: Added 11 Biomes
-[21:49:52] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_swampland, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:soul_plain, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (3cf0372)
-[21:49:52] [main/INFO]: Added 11 Biomes
-[21:49:52] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_swampland, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:soul_plain, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (3cf0372)
-[21:49:52] [main/INFO]: Added 11 Biomes
-[21:49:52] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_swampland, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:soul_plain, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (3cf0372)
-[21:49:52] [main/INFO]: Added 11 Biomes
-[21:49:52] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_swampland, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:soul_plain, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
-[21:49:52] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
-[21:49:52] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (664c4739)
-[21:49:52] [main/INFO]: Added 5 Biomes
-[21:49:52] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
-[21:49:52] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
-[21:49:52] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
-[21:49:52] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
-[21:49:52] [main/INFO]: Applied 131 biome modifications and added 114 tags to 119 of 205 biomes in 18.97 ms
-[21:49:53] [main/INFO]: Applied 3528 biome modifications to 205 of 205 new biomes in 36.18 ms
-[21:49:53] [Server thread/INFO]: Dispatching loading event for config deathfinder-server.toml
-[21:49:53] [Server thread/INFO]: Starting minecraft server version 1.21.1
-[21:49:53] [Server thread/INFO]: Loading properties
-[21:49:53] [Server thread/INFO]: Default game type: SURVIVAL
-[21:49:53] [Server thread/INFO]: Generating keypair
-[21:49:53] [Server thread/INFO]: Starting Minecraft server on *:25565
-[21:49:53] [Server thread/INFO]: Using epoll channel type
-[21:49:53] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[21:49:53] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[21:49:53] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[21:49:53] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[21:49:53] [Server thread/INFO]: Preparing level "world"
-[21:49:53] [Server thread/INFO]: World Dimensions: 
- - minecraft:the_end: 
-     WoVer - Chunk Generator (33cc4bf8)
-         preset     = wover:normal
-         noise      = minecraft:end
-         features   = minecraft(5), mythicupgrades(5), betterend(127), waystones(1), mythicmetals(1)
-     WoVer - The End  BiomeSource (664c4739)
-         biomes     = 24
-         namespaces = minecraft(5), betterend(19)
-         seed       = 6084329118557101396
-         height     = 128
-         deciders   = 0
-         config     = EndConfig{mapVersion=hex, generatorVersion=vanilla, withVoidBiomes=true, innerVoidRadius=1024, voidBiomesSize=16, centerBiomesSize=16, landBiomesSize=16, barrensBiomesSize=16}
+[13:43:49] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/workspaces/autopaper/fabric_server/libraries/net/fabricmc/sponge-mixin/0.15.3+mixin.0.8.7/sponge-mixin-0.15.3+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[13:43:49] [main/INFO]: Compatibility level set to JAVA_21
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.base.mixin
+[13:43:50] [main/INFO]: Global Executor Parallelism: 1 configured, 1 evaluated, 1 default evaluated
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.fixes.chunkio.threading_issues.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.fixes.general.threading_issues.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.fixes.worldgen.threading_issues.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.fixes.worldgen.vanilla_bugs.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.notickvd.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.opts.allocs.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.opts.chunk_access.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.opts.chunkio.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.opts.math.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.opts.scheduling.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.opts.worldgen.general.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.opts.worldgen.vanilla.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.rewrites.chunk_serializer.mixin
+[13:43:50] [main/INFO]: Disabling config ioSystem.gcFreeChunkSerializer: Incompatible with architectury@13.0.6 (*) (defined in c2me)
+[13:43:50] [main/INFO]: Disabling com.ishland.c2me.rewrites.chunk_serializer.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.rewrites.chunksystem.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.rewrites.chunkio.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.server.utils.mixin
+[13:43:50] [main/INFO]: Initializing com.ishland.c2me.threading.lighting.mixin
+[13:43:50] [main/WARN]: Reference map 'deathfinder.fabric.refmap.json' for deathfinder.fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[13:43:50] [main/WARN]: Reference map 'forgeconfigapiport.common.refmap.json' for forgeconfigapiport.common.mixins.json could not be read. If this is a development environment you can ignore this message
+[13:43:50] [main/WARN]: Reference map 'leavesbegone.fabric.refmap.json' for leavesbegone.fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[13:43:50] [main/WARN]: Mod 'c2me' attempted to override option 'mixin.world.player_chunk_tick', which doesn't exist, ignoring
+[13:43:50] [main/INFO]: Loaded configuration file for Lithium: 144 options available, 2 override(s) found
+[13:43:50] [main/INFO]: Loaded configuration file for ModernFix 5.19.3+mc1.21.1: 54 options available, 4 override(s) found
+[13:43:50] [main/WARN]: Option 'mixin.bugfix.paper_chunk_patches' overriden (by mods [c2me]) to 'false'
+[13:43:50] [main/WARN]: Option 'mixin.perf.cache_strongholds' overriden (by mods [c2me]) to 'false'
+[13:43:50] [main/WARN]: Option 'mixin.perf.nbt_memory_usage' overriden (by mods [c2me]) to 'false'
+[13:43:50] [main/WARN]: Option 'mixin.bugfix.chunk_deadlock' overriden (by mods [c2me]) to 'false'
+[13:43:50] [main/INFO]: Applying Nashorn fix
+[13:43:50] [main/INFO]: Successfully started async appender with [ServerGuiConsole, SysOut, File]
+[13:43:51] [main/WARN]: Error loading class: ca/spottedleaf/starlight/common/thread/SchedulingUtil (java.lang.ClassNotFoundException: ca/spottedleaf/starlight/common/thread/SchedulingUtil)
+[13:43:51] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
+[13:43:51] [main/WARN]: Force-disabling mixin 'alloc.chunk_ticking.ServerChunkManagerMixin' as rule 'mixin.alloc.chunk_ticking' (added by mods [servercore]) disables it and children
+[13:43:51] [main/WARN]: Error loading class: net/minecraft/class_287 (java.lang.ClassNotFoundException: net/minecraft/class_287)
+[13:43:51] [main/WARN]: @Mixin target net.minecraft.class_287 was not found owo.mixins.json:BufferBuilderAccessor from mod owo
+[13:43:51] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
+[13:43:51] [main/WARN]: @Mixin target net.minecraft.class_437 was not found owo.mixins.json:ScreenAccessor from mod owo
+[13:43:51] [main/WARN]: Error loading class: com/simibubi/create/content/kinetics/base/BlockBreakingKineticBlockEntity (java.lang.ClassNotFoundException: com/simibubi/create/content/kinetics/base/BlockBreakingKineticBlockEntity)
+[13:43:51] [main/WARN]: Error loading class: net/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry$TexturedModelDataProvider (java.lang.ClassNotFoundException: net/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry$TexturedModelDataProvider)
+[13:43:51] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[13:43:54] [main/INFO]: Injecting BlockStateBase cache population hook into lithium$getPathNodeType from me.jellysquid.mods.lithium.mixin.ai.pathing.AbstractBlockStateMixin
+[13:43:54] [main/INFO]: Injecting BlockStateBase cache population hook into lithium$getAllFlags from me.jellysquid.mods.lithium.mixin.util.block_tracking.AbstractBlockStateMixin
+[13:43:54] [main/INFO]: Injecting BlockStateBase cache population hook into lithium$getNeighborPathNodeType from me.jellysquid.mods.lithium.mixin.ai.pathing.AbstractBlockStateMixin
+[13:43:55] [main/WARN]: Method overwrite conflict for method_21740 in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by me.jellysquid.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
+[13:43:59] [main/INFO]: Vanilla bootstrap took 6605 milliseconds
+[13:43:59] [main/INFO]: Initializing platform helper for Advanced Netherite!
+[13:44:00] [main/INFO]: =^..^=    BetterNether for 1.21    =^..^=
+[13:44:00] [main/INFO]: Loading Collective version 7.84.
+[13:44:00] [main/INFO]: Constructing common components for deathfinder:main
+[13:44:01] [Cicada thread 0/INFO]: [cicada] Hello, anyone there?
+[13:44:01] [Cicada thread 0/INFO]: [MythicMetals] A Cicada? Free Gray Dye...
+[13:44:01] [main/INFO]: [KONKRETE] Loading v1.9.9 in server-side mode on FABRIC!
+[13:44:01] [main/INFO]: ---------------------------
+[13:44:01] [main/INFO]: KONKRETE SHIPS AND USES THE FOLLOWING LIBRARIES:
+[13:44:01] [main/INFO]:  
+[13:44:01] [main/INFO]: Open Imaging Copyright © 2014 Dhyan Blum.
+[13:44:01] [main/INFO]: Open Imaging is licensed under Apache-2.0.
+[13:44:01] [main/INFO]:  
+[13:44:01] [main/INFO]: JsonPath Copyright © 2017 Jayway.
+[13:44:01] [main/INFO]: JsonPath is licensed under Apache-2.0.
+[13:44:01] [main/INFO]:  
+[13:44:01] [main/INFO]: Json-smart Copyright © netplex.
+[13:44:01] [main/INFO]: Json-smart is licensed under Apache-2.0.
+[13:44:01] [main/INFO]:  
+[13:44:01] [main/INFO]: Exp4j Copyright © Frank Asseg.
+[13:44:01] [main/INFO]: Exp4j is licensed under Apache-2.0. https://github.com/fasseg/exp4j
+[13:44:01] [main/INFO]: ---------------------------
+[13:44:01] [main/INFO]: [KONKRETE] Server-side modules initialized and ready to use!
+[13:44:01] [main/INFO]: Ksyxis: Booting... (platform: Fabric, manual: false)
+[13:44:01] [main/INFO]: Ksyxis: Found Mixin library. (version: 0.8.7)
+[13:44:01] [main/INFO]: Ksyxis: Ready. As always, this mod will speed up your world loading and might or might not break it.
+[13:44:01] [main/INFO]: Constructing common components for leavesbegone:main
+[13:44:01] [main/INFO]: [Mythic Metals] Terralith detected. Please go over the config and disable Overworld Nether Ores
+[13:44:01] [main/INFO]: [Mythic Metals] Many ores spawn in unexpected ways due to the new overworld. Modpack devs, take note of this
+[13:44:01] [main/INFO]: [Mythic Metals] Mythic Metals is now initialized.
+[13:44:01] [main/INFO]: Registering Effects...
+[13:44:01] [main/INFO]: Registering Mythic Items for mythicupgrades
+[13:44:01] [main/INFO]: Registering Mythic Blocks for mythicupgrades
+[13:44:01] [main/INFO]: Mythic Upgrades works properly! CAN, ANNENE SELAMLAR KARDESIM! <3
+[13:44:01] [main/INFO]: Chase your dreams, no matter the cost. Don't wait for invitations, take action. Making a decision, starting something - that's half the battle of achieving success.
+[13:44:02] [main/INFO]: glisco makes a dollar, I make a dime, that's why I mald on company time
+[13:44:02] [main/INFO]: Packet Fixer has been initialized successfully
+[13:44:02] [main/INFO]: Constructing common components for puzzleslib:main
+[13:44:02] [main/INFO]: [ServerCore] Loaded V1.5.5+1.21.1!
+[13:44:02] [main/INFO]: Registered the FluidEffect with Unique ID of minecraft:water for minecraft:water 81000 with the ID 0
+[13:44:02] [main/INFO]: Registered the FluidEffect with Unique ID of minecraft:lava for minecraft:lava 81000 with the ID 1
+[13:44:02] [main/INFO]: Registered the FluidEffect with Unique ID of travelersbackpack:potion for travelersbackpack:potion_still 27000 with the ID 2
+[13:44:02] [main/INFO]: Registered the FluidEffect with Unique ID of travelersbackpack:milk for travelersbackpack:milk_still 81000 with the ID 3
+[13:44:02] [main/INFO]: Reflections took 39 ms to scan 1 urls, producing 1 keys and 3 values
+[13:44:02] [main/INFO]: Reflections took 15 ms to scan 1 urls, producing 1 keys and 3 values
+[13:44:03] [main/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[13:44:03] [main/INFO]: Ignoring Patch{ModCore: bclib (bclib):3.0.11:196619}
+[13:44:03] [main/INFO]: Ignoring Patch{ModCore: betternether (betternether):5.3.5:328453}
+[13:44:03] [main/INFO]: Ignoring Patch{ModCore: betternether (betternether):8.2.2:524802}
+[13:44:03] [main/INFO]: Ignoring Patch{ModCore: betternether (betternether):9.0.1:589825}
+[13:44:03] [main/INFO]: Running Pre Patchers on ./world/.
+[13:44:03] [main/INFO]: Everything up to date
+[13:44:03] [main/WARN]: Missing metadata in pack file/All The Minecraft Music-DP 1.1.zip
+[13:44:03] [main/INFO]: Processing wover.datapack.registry Entrypoints
+[13:44:03] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.BiomeDatapackRegistryEntrypoint
+[13:44:03] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.FeatureDatapackRegistryEntrypoint
+[13:44:03] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.ItemDatapackRegistryEntrypoint
+[13:44:03] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.StructureDatapackRegistryEntrypoint
+[13:44:03] [main/INFO]:     - Processing Entrypoint: org.betterx.wover.entrypoint.SurfaceDatapackRegistryEntrypoint
+[13:44:04] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (8db6c31)
+[13:44:04] [main/INFO]: Unable to build Biome List yet
+[13:44:04] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
+[13:44:04] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (698990)
+[13:44:04] [main/INFO]: Unable to build Biome List yet
+[13:44:04] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
+[13:44:04] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (133ba0f1)
+[13:44:04] [main/INFO]: Unable to build Biome List yet
+[13:44:04] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
+[13:44:04] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (6ee7a80f)
+[13:44:04] [main/INFO]: Unable to build Biome List yet
+[13:44:04] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
+[13:44:04] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (1a9242c7)
+[13:44:04] [main/INFO]: Unable to build Biome List yet
+[13:44:04] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
+[13:44:04] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (3300b77e)
+[13:44:04] [main/INFO]: Unable to build Biome List yet
+[13:44:04] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:amber_land
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:amber_land
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:blossoming_spires
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:blossoming_spires
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:bone_reef (class_4762[temperature=-100, humidity=-500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:chorus_forest
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:crimson_glowing_woods (class_4762[temperature=4000, humidity=-500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:crimson_pinewood (class_4762[temperature=3500, humidity=1000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:crystal_mountains
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:crystal_mountains
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dragon_graveyards
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dragon_graveyards
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dry_shrubland
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dry_shrubland
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:dust_wastelands
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:flooded_deltas (class_4762[temperature=-3000, humidity=-100, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1750])
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:foggy_mushroomland
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:foggy_mushroomland
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:glowing_grasslands
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:glowing_grasslands
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:gravel_desert (class_4762[temperature=-1000, humidity=1000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=2000])
+[13:44:05] [main/INFO]: Adding Small End Island Biome to Fabric: betterend:ice_starfield
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:lantern_woods
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:lantern_woods
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:magma_land (class_4762[temperature=8000, humidity=-7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake_grove
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:megalake_grove
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:neon_oasis
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:neon_oasis
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_grasslands (class_4762[temperature=0, humidity=7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_jungle (class_4762[temperature=5000, humidity=8000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_mushroom_forest (class_4762[temperature=0, humidity=7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_mushroom_forest_edge (class_4762[temperature=0, humidity=7000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_swampland (class_4762[temperature=1000, humidity=8000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:nether_swampland_terraces (class_4762[temperature=800, humidity=8500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:old_fungiwoods (class_4762[temperature=0, humidity=6500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:old_swampland (class_4762[temperature=1000, humidity=7500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1000])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:old_warped_woods (class_4762[temperature=0, humidity=5500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=3750])
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:painted_mountains
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:painted_mountains
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:poor_nether_grasslands (class_4762[temperature=0, humidity=3000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:shadow_forest
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:shadow_forest
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:soul_plain (class_4762[temperature=100, humidity=-5000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:sulfuric_bone_reef (class_4762[temperature=0, humidity=6000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=3700])
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:sulphur_springs
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:sulphur_springs
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbra_valley
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbra_valley
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbrella_jungle
+[13:44:05] [main/INFO]: Adding End Highland Biome to Fabric: betterend:umbrella_jungle
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:upside_down_forest (class_4762[temperature=4500, humidity=8000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1250])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:upside_down_forest_cleared (class_4762[temperature=4500, humidity=3000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=1250])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:wart_forest (class_4762[temperature=-5000, humidity=5000, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Adding Nether Biome to Fabric: betternether:wart_forest_edge (class_4762[temperature=-5000, humidity=4500, continentalness=0, erosion=0, depth=0, weirdness=0, offset=0])
+[13:44:05] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (73aa6ad9)
+[13:44:05] [main/INFO]: Unable to build Biome List yet
+[13:44:05] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
+[13:44:05] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (19346f35)
+[13:44:05] [main/INFO]: Unable to build Biome List yet
+[13:44:05] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
+[13:44:05] [Worker-Main-3/ERROR]: Unable to building bartering table
+[13:44:06] [Worker-Main-1/INFO]: registered playit command
+[13:44:06] [main/INFO]: Disabling Recipe: bclib:test_star
+[13:44:07] [main/INFO]: Loaded 3854 recipes
+[13:44:07] [main/INFO]: Added 0 recipes in 1ms
+[13:44:07] [main/ERROR]: Couldn't load advancements: [nova_structures:adventure/find_shrine, minecraft:give_quest_trader_trade, minecraft:wander_add_map]
+[13:44:07] [main/INFO]: Loaded 3467 advancements
+[13:44:07] [ForkJoinPool.commonPool-worker-3/INFO]: Loaded 58 translation keys
+[13:44:07] [main/INFO]: Reloading grave shape (server)
+[13:44:07] [main/INFO]: Grave model and shape reload successful (server)
+[13:44:07] [main/INFO]: Reloading YIGD graveyard data (server)
+[13:44:07] [main/INFO]: Graveyard data successfully reloaded (server)
+[13:44:07] [main/INFO]: Reloading YIGD grave area overrides (server)
+[13:44:07] [main/INFO]: Grave area overrides successfully reloaded (server)
+[13:44:07] [main/WARN]: Not all defined tags for registry ResourceKey[minecraft:root / minecraft:item] are present in data pack: minecraft:enchantable/empty
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (6dff8fe9)
+[13:44:07] [main/INFO]: Added 5 Biomes
+[13:44:07] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
+[13:44:07] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:07] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
+[13:44:07] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (7708c54d)
+[13:44:07] [main/INFO]: Added 11 Biomes
+[13:44:07] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_swampland, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:soul_plain, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
+[13:44:07] [main/INFO]: Created WoverChunkGenerator with org.betterx.wover.generator.impl.biomesource.nether.WoverNetherBiomeSource
+[13:44:07] [main/INFO]: Added Tags for 1 fabric biomes in 74.72 ms
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (7708c54d)
+[13:44:07] [main/INFO]: Added 11 Biomes
+[13:44:07] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_swampland, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:soul_plain, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (19346f35)
+[13:44:07] [main/INFO]: Added 11 Biomes
+[13:44:07] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_swampland, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:soul_plain, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (19346f35)
+[13:44:07] [main/INFO]: Added 11 Biomes
+[13:44:07] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_swampland, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:soul_plain, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
+[13:44:07] [main/INFO]: Added 6 biomes to wover:is_end/highland in 2.067 ms
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (6dff8fe9)
+[13:44:07] [main/INFO]: Added 5 Biomes
+[13:44:07] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
+[13:44:07] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:07] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (73aa6ad9)
+[13:44:07] [main/INFO]: Added 5 Biomes
+[13:44:07] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
+[13:44:07] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:07] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (73aa6ad9)
+[13:44:07] [main/INFO]: Added 5 Biomes
+[13:44:07] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
+[13:44:07] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:07] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - Nether BiomeSource (19346f35)
+[13:44:07] [main/INFO]: Added 11 Biomes
+[13:44:07] [main/INFO]:  - betternether:crimson_glowing_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_fungiwoods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_swampland, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:nether_swampland_terraces, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:flooded_deltas, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:crimson_pinewood, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:soul_plain, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:old_warped_woods, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:poor_nether_grasslands, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:upside_down_forest_cleared, subbiomes=1
+[13:44:07] [main/INFO]:  - betternether:sulfuric_bone_reef, subbiomes=1
+[13:44:07] [main/INFO]: Updating Pickers for WoVer - The End  BiomeSource (73aa6ad9)
+[13:44:07] [main/INFO]: Added 5 Biomes
+[13:44:07] [main/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:painted_mountains, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:megalake_grove, subbiomes=1
+[13:44:07] [main/INFO]:  - betterend:neon_oasis, subbiomes=1
+[13:44:07] [main/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:07] [main/INFO]: No Barrens Biomes found. Disabling by using land Biomes
+[13:44:07] [main/INFO]: Applied 131 biome modifications and added 114 tags to 119 of 205 biomes in 39.43 ms
+[13:44:07] [main/INFO]: Applied 3528 biome modifications to 205 of 205 new biomes in 45.50 ms
+[13:44:07] [Server thread/INFO]: Dispatching loading event for config deathfinder-server.toml
+[13:44:07] [Server thread/INFO]: Dispatching loading event for config leavesbegone-server.toml
+[13:44:08] [Server thread/INFO]: Starting minecraft server version 1.21.1
+[13:44:08] [Server thread/INFO]: Loading properties
+[13:44:08] [Server thread/INFO]: Default game type: SURVIVAL
+[13:44:08] [Server thread/INFO]: Generating keypair
+[13:44:08] [Server thread/INFO]: Starting Minecraft server on *:25565
+[13:44:08] [Server thread/INFO]: Using epoll channel type
+[13:44:08] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[13:44:08] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[13:44:08] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[13:44:08] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[13:44:08] [Server thread/INFO]: Preparing level "world"
+[13:44:08] [Server thread/INFO]: World Dimensions: 
  - minecraft:the_nether: 
-     WoVer - Chunk Generator (109f9a10)
+     WoVer - Chunk Generator (7368c2c8)
          preset     = wover:normal
          noise      = minecraft:nether
          features   = minecraft(37), mythicupgrades(4), betternether(95), waystones(1), mythicmetals(4)
-     WoVer - Nether BiomeSource (3cf0372)
+     WoVer - Nether BiomeSource (19346f35)
          biomes     = 27
          namespaces = betternether(22), minecraft(5)
          seed       = 6084329118557101396
          height     = 128
          config     = NetherConfig{mapVersion=hex, useVerticalBiomes=true, biomeSize=16, biomeSizeVertical=5}
+ - minecraft:the_end: 
+     WoVer - Chunk Generator (5618a849)
+         preset     = wover:normal
+         noise      = minecraft:end
+         features   = minecraft(5), mythicupgrades(5), betterend(127), waystones(1), mythicmetals(1)
+     WoVer - The End  BiomeSource (73aa6ad9)
+         biomes     = 24
+         namespaces = betterend(19), minecraft(5)
+         seed       = 6084329118557101396
+         height     = 128
+         deciders   = 0
+         config     = EndConfig{mapVersion=hex, generatorVersion=vanilla, withVoidBiomes=true, innerVoidRadius=1024, voidBiomesSize=16, centerBiomesSize=16, landBiomesSize=16, barrensBiomesSize=16}
  - minecraft:overworld: 
-     class_3754 (43cc3943)
+     class_3754 (8d1e794)
          preset     = minecraft:normal
          noise      = minecraft:overworld
          features   = terralith(384), minecraft(153), mythicupgrades(6), waystones(3), mythicmetals(19)
-     class_4766 (1bdb4b85)
+     class_4766 (c70f5ad)
          biomes     = 147
          namespaces = minecraft(53), terralith(94)
-[21:49:53] [Server thread/INFO]: Merged 19 additional Surface Rules for Dimension minecraft:the_end => 20 (413.6 μs) using WoVer - The End  BiomeSource (664c4739)
-    biomes     = 24
-    namespaces = minecraft(5), betterend(19)
-    seed       = 6084329118557101396
-    height     = 128
-    deciders   = 0
-    config     = EndConfig{mapVersion=hex, generatorVersion=vanilla, withVoidBiomes=true, innerVoidRadius=1024, voidBiomesSize=16, centerBiomesSize=16, landBiomesSize=16, barrensBiomesSize=16}
-[21:49:53] [Server thread/INFO]: Merged 22 additional Surface Rules for Dimension minecraft:the_nether => 74 (800.4 μs) using WoVer - Nether BiomeSource (3cf0372)
+[13:44:08] [Server thread/INFO]: Merged 22 additional Surface Rules for Dimension minecraft:the_nether => 74 (892.2 μs) using WoVer - Nether BiomeSource (19346f35)
     biomes     = 27
     namespaces = betternether(22), minecraft(5)
     seed       = 6084329118557101396
     height     = 128
     config     = NetherConfig{mapVersion=hex, useVerticalBiomes=true, biomeSize=16, biomeSizeVertical=5}
-[21:49:53] [Server thread/INFO]: Enforcing safe world random access
-[21:49:54] [Server thread/INFO]: Changing watch distance to 7
-[21:49:54] [Server thread/INFO]: Using TheSpeedyObjectFactory with Unsafe
-[21:49:54] [Server thread/INFO]: Added 2 Biomes
-[21:49:54] [Server thread/INFO]:  - minecraft:end_barrens, subbiomes=1
-[21:49:54] [Server thread/INFO]:  - minecraft:end_midlands, subbiomes=1
-[21:49:57] [Server thread/INFO]: Changing watch distance to 7
-[21:49:57] [Server thread/INFO]: Added 2 Biomes
-[21:49:57] [Server thread/INFO]:  - minecraft:end_barrens, subbiomes=1
-[21:49:57] [Server thread/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:08] [Server thread/INFO]: Merged 19 additional Surface Rules for Dimension minecraft:the_end => 20 (280.7 μs) using WoVer - The End  BiomeSource (73aa6ad9)
+    biomes     = 24
+    namespaces = betterend(19), minecraft(5)
+    seed       = 6084329118557101396
+    height     = 128
+    deciders   = 0
+    config     = EndConfig{mapVersion=hex, generatorVersion=vanilla, withVoidBiomes=true, innerVoidRadius=1024, voidBiomesSize=16, centerBiomesSize=16, landBiomesSize=16, barrensBiomesSize=16}
+[13:44:08] [Server thread/INFO]: Enforcing safe world random access
+[13:44:09] [Server thread/INFO]: Changing watch distance to 7
+[13:44:09] [Server thread/INFO]: Using TheSpeedyObjectFactory with Unsafe
+[13:44:09] [Server thread/INFO]: Added 2 Biomes
+[13:44:09] [Server thread/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:09] [Server thread/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:11] [Server thread/INFO]: Changing watch distance to 7
+[13:44:11] [Server thread/INFO]: Added 2 Biomes
+[13:44:11] [Server thread/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:11] [Server thread/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:11] [Server thread/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
+[13:44:11] [Server thread/INFO]: Changing watch distance to 7
+[13:44:11] [Server thread/INFO]: Added 2 Biomes
+[13:44:11] [Server thread/INFO]:  - minecraft:end_barrens, subbiomes=1
+[13:44:11] [Server thread/INFO]:  - minecraft:end_midlands, subbiomes=1
+[13:44:11] [Server thread/INFO]: Ksyxis: Hey. This is Ksyxis. We will now load the world and will try to do it quickly. If the game is not responding after this, it's probably us to blame or delete for good. This message appears always, even if the mod works flawlessly. (modern)
+[13:44:11] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[13:44:11] [Server thread/INFO]: Time elapsed: 137 ms
+[13:44:11] [Server thread/INFO]: Done (3.499s)! For help, type "help"
+[13:44:11] [Server thread/WARN]: Dedicated server took 24.063 seconds to load
+[13:44:12] [Thread-13/INFO]: secret key found, checking
+[13:44:12] [Thread-13/INFO]: check secret
+[13:44:15] [Thread-13/INFO]: found minecraft java tunnel: sent-documents.joinmc.link
+[13:44:15] [Thread-13/INFO]: keys and tunnel setup
+[13:44:48] [Server thread/INFO]: [Not Secure] [Server] Minecart with Chest, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Falling Gravel, Moss Carpet, Azalea, Wheat Seeds, Wheat Seeds, Moss Carpet, Moss Carpet, Wheat Seeds, Minecart with Chest
+[13:44:55] [Server thread/INFO]: [Not Secure] [Server] 
+[13:44:59] [Server thread/INFO]: [Not Secure] [Server] 
+[14:04:03] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.142.194:23639, peerAddr=112.208.65.223:8644, claimAddress=209.25.142.2:43784, claimToken=[44, 0, 60, -47, 25, -114, -62, 92, 87, 112, -48, 65, -33, 33, -60, -128, 86, -32, -43, -85, 8, 102, -22, -35, -45, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -37, -43, -85, 8, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 103, 85, 69, -29, -15, -73, 24, 117, -11, 126, 123, -36, 81, -83, -1, -2], tunnelServerId=5, dataCenterId=18}
+[14:04:03] [Thread-13/INFO]: starting tcp tunnel for client
+[14:04:03] [Thread-13/INFO]: start connection to /209.25.142.2:43784 to claim client
+[14:04:03] [nioEventLoopGroup-2-1/INFO]: connected to tunnel server, sending claim token
+[14:04:03] [nioEventLoopGroup-2-1/INFO]: claim token sent
+[14:04:03] [nioEventLoopGroup-2-1/INFO]: connection to tunnel server has been established
+[14:04:03] [nioEventLoopGroup-2-1/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:04:03] [nioEventLoopGroup-2-1/INFO]: failed to get ServerConnection from Minecraft Server
+[14:04:03] [nioEventLoopGroup-2-1/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:04:03] [nioEventLoopGroup-2-2/INFO]: connected to local minecraft server
+[14:04:08] [Server thread/INFO]: _d4nny[/127.0.0.1:43718] logged in with entity id 53 at (-1851.9837710898828, 85.0, -932.2990681520047)
+[14:04:08] [Server thread/INFO]: Sending server config values to client
+[14:04:08] [Server thread/INFO]: Loading config from file...
+[14:04:08] [Server thread/INFO]: _d4nny joined the game
+[14:04:09] [Server thread/INFO]: Priority overwritten for player _d4nny. Claiming: GRAVE / Robbing: INVENTORY
+[14:04:09] [Server thread/INFO]: Receiving client config
+[14:08:54] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.142.194:23639, peerAddr=114.30.97.170:60306, claimAddress=209.25.142.2:43784, claimToken=[44, 0, 60, -47, 25, -114, -62, 92, 87, 114, 30, 97, -86, -21, -110, 67, 81, 13, -60, -85, 8, 102, -22, -34, -10, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -49, -60, -85, 8, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 42, -82, -119, -9, 32, -123, -102, -99, -13, -2, 78, 17, 87, -39, -97, -20], tunnelServerId=1, dataCenterId=19}
+[14:08:54] [Thread-13/INFO]: starting tcp tunnel for client
+[14:08:54] [Thread-13/INFO]: start connection to /209.25.142.2:43784 to claim client
+[14:08:54] [nioEventLoopGroup-2-3/INFO]: connected to tunnel server, sending claim token
+[14:08:54] [nioEventLoopGroup-2-3/INFO]: claim token sent
+[14:08:54] [nioEventLoopGroup-2-3/INFO]: connection to tunnel server has been established
+[14:08:54] [nioEventLoopGroup-2-3/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:08:54] [nioEventLoopGroup-2-3/INFO]: failed to get ServerConnection from Minecraft Server
+[14:08:54] [nioEventLoopGroup-2-3/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:08:54] [nioEventLoopGroup-2-4/INFO]: connected to local minecraft server
+[14:08:59] [Server thread/INFO]: Thedarkshadow776[/127.0.0.1:40070] logged in with entity id 1040 at (-2631.856815228244, 96.61601299227222, 4171.8650013057695)
+[14:08:59] [Server thread/INFO]: Sending server config values to client
+[14:08:59] [Server thread/INFO]: Loading config from file...
+[14:08:59] [Server thread/INFO]: Thedarkshadow776 joined the game
+[14:08:59] [Server thread/WARN]: Skipping Entity with id 
+[14:09:00] [c2me-worker-0/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseOreBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
+[14:09:00] [c2me-worker-0/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.JellyshroomCapBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
+[14:09:00] [c2me-worker-0/WARN]: Lithium Class Analysis Error: Class org.betterx.bclib.blocks.BaseLeavesBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_793. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
+[14:09:00] [c2me-worker-0/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.TenaneaFlowersBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
+[14:09:00] [Server thread/INFO]: Priority overwritten for player Thedarkshadow776. Claiming: GRAVE / Robbing: INVENTORY
+[14:09:00] [Server thread/INFO]: Receiving client config
+[14:09:00] [c2me-worker-0/WARN]: Lithium Class Analysis Error: Class org.betterx.betterend.blocks.basis.StoneLanternBlock cannot be analysed, because getting declared methods crashes with NoClassDefFoundError: net/minecraft/class_322. This is usually caused by modded entities declaring methods that have a return type or parameter type that is annotated with @Environment(value=EnvType.CLIENT). Loading the type is not possible, because it only exists in the CLIENT environment. The recommended fix is to annotate the method with this argument or return type with the same annotation. Lithium handles this error by assuming the class cannot be included in some optimizations.
+[14:09:04] [Server thread/INFO]: [Thedarkshadow776: Triggered [tpa]]
+[14:09:06] [Server thread/INFO]: [Thedarkshadow776: Triggered [tpaTo] (set value to 2)]
+[14:09:21] [Server thread/INFO]: [Not Secure] <Thedarkshadow776> oh
+[14:09:32] [nioEventLoopGroup-2-3/WARN]: failed to send data to tunnel
+[14:09:32] [Server thread/INFO]: Thedarkshadow776 lost connection: Disconnected
+[14:09:32] [Server thread/INFO]: Thedarkshadow776 left the game
+[14:09:42] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.142.194:23639, peerAddr=114.30.97.170:60336, claimAddress=209.25.142.2:43784, claimToken=[44, 0, 60, -47, 25, -114, -62, 92, 87, 114, 30, 97, -86, -21, -80, -63, -118, 72, 28, -85, 8, 102, -22, -33, 38, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -9, 28, -85, 8, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -53, -85, -17, 56, 66, 75, -82, 98, 45, 36, 84, 97, 7, -72, 127, 127], tunnelServerId=1, dataCenterId=19}
+[14:09:42] [Thread-13/INFO]: starting tcp tunnel for client
+[14:09:42] [Thread-13/INFO]: start connection to /209.25.142.2:43784 to claim client
+[14:09:42] [nioEventLoopGroup-2-5/INFO]: connected to tunnel server, sending claim token
+[14:09:42] [nioEventLoopGroup-2-5/INFO]: claim token sent
+[14:09:42] [nioEventLoopGroup-2-5/INFO]: connection to tunnel server has been established
+[14:09:42] [nioEventLoopGroup-2-5/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:09:42] [nioEventLoopGroup-2-5/INFO]: failed to get ServerConnection from Minecraft Server
+[14:09:42] [nioEventLoopGroup-2-5/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:09:42] [nioEventLoopGroup-2-6/INFO]: connected to local minecraft server
+[14:09:42] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.142.194:23639, peerAddr=114.30.97.170:60339, claimAddress=209.25.142.2:40712, claimToken=[44, 0, 60, -47, 25, -114, -62, 92, 87, 114, 30, 97, -86, -21, -77, 96, -98, -86, 45, -97, 8, 102, -22, -33, 38, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 22, 45, -97, 8, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 52, 38, 69, -83, -90, -96, 54, -78, -23, -98, -32, -93, 34, 125, -116, 39], tunnelServerId=1, dataCenterId=19}
+[14:09:42] [Thread-13/INFO]: starting tcp tunnel for client
+[14:09:42] [Thread-13/INFO]: start connection to /209.25.142.2:40712 to claim client
+[14:09:42] [nioEventLoopGroup-2-7/INFO]: connected to tunnel server, sending claim token
+[14:09:42] [nioEventLoopGroup-2-7/INFO]: claim token sent
+[14:09:42] [nioEventLoopGroup-2-7/INFO]: connection to tunnel server has been established
+[14:09:42] [nioEventLoopGroup-2-7/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:09:42] [nioEventLoopGroup-2-7/INFO]: failed to get ServerConnection from Minecraft Server
+[14:09:42] [nioEventLoopGroup-2-7/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:09:42] [nioEventLoopGroup-2-8/INFO]: connected to local minecraft server
+[14:13:07] [nioEventLoopGroup-2-1/WARN]: failed to send data to tunnel
+[14:13:07] [Server thread/INFO]: _d4nny lost connection: Disconnected
+[14:13:07] [Server thread/INFO]: _d4nny left the game
+[14:13:21] [Thread-13/INFO]: got new client: NewClient{connectAddr=[2602:fbaf:080c:0000:0000:0000:0000:00c2]:23639, peerAddr=[2001:19f0:6402:08f2:5400:05ff:fe0c:67c3]:36182, claimAddress=209.25.142.2:43786, claimToken=[64, 0, 88, 38, 2, -5, -81, 8, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -62, 92, 87, 32, 1, 25, -16, 100, 2, 8, -14, 84, 0, 5, -1, -2, 12, 103, -61, -115, 86, 0, 11, -99, 28, -125, -58, -21, 100, -85, 10, 102, -22, -32, 1, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -105, 100, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, -39, 101, 23, -45, 49, -29, -19, 63, -120, -23, 3, 9, -67, 42, -41, -93], tunnelServerId=1, dataCenterId=44}
+[14:13:21] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:21] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:21] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:41900, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -93, -84, -64, -114, 12, -116, -85, 10, 102, -22, -32, 1, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -11, -116, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 66, -107, -50, -17, 5, 19, 52, -6, -115, -79, -54, -72, 31, -33, 5, -46], tunnelServerId=1, dataCenterId=44}
+[14:13:21] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:21] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:21] [nioEventLoopGroup-2-1/INFO]: connected to tunnel server, sending claim token
+[14:13:21] [nioEventLoopGroup-2-1/INFO]: claim token sent
+[14:13:21] [nioEventLoopGroup-2-2/INFO]: connected to tunnel server, sending claim token
+[14:13:21] [nioEventLoopGroup-2-2/INFO]: claim token sent
+[14:13:21] [nioEventLoopGroup-2-1/INFO]: connection to tunnel server has been established
+[14:13:21] [nioEventLoopGroup-2-2/INFO]: connection to tunnel server has been established
+[14:13:21] [nioEventLoopGroup-2-1/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:21] [nioEventLoopGroup-2-1/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:21] [nioEventLoopGroup-2-2/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:21] [nioEventLoopGroup-2-1/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:21] [nioEventLoopGroup-2-2/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:21] [nioEventLoopGroup-2-2/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:21] [nioEventLoopGroup-2-3/INFO]: connected to local minecraft server
+[14:13:21] [nioEventLoopGroup-2-4/INFO]: connected to local minecraft server
+[14:13:22] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:41914, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -93, -70, -111, 112, 9, -51, -85, 10, 102, -22, -32, 2, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -115, -51, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, -96, 81, -121, -74, -5, 91, 50, -47, -77, 111, 21, -41, -61, -64, -59, -66], tunnelServerId=1, dataCenterId=44}
+[14:13:22] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:22] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:22] [nioEventLoopGroup-2-5/INFO]: connected to tunnel server, sending claim token
+[14:13:22] [nioEventLoopGroup-2-5/INFO]: claim token sent
+[14:13:22] [nioEventLoopGroup-2-5/INFO]: connection to tunnel server has been established
+[14:13:22] [nioEventLoopGroup-2-5/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:22] [nioEventLoopGroup-2-5/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:22] [nioEventLoopGroup-2-5/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:22] [nioEventLoopGroup-2-6/INFO]: connected to local minecraft server
+[14:13:23] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:41916, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -93, -68, -43, -100, 8, 122, -85, 10, 102, -22, -32, 2, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 18, 122, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -9, -77, -28, -15, -48, -92, -77, 15, 65, 41, -114, 59, 2, 13, -101, 103], tunnelServerId=1, dataCenterId=44}
+[14:13:23] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:23] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:23] [nioEventLoopGroup-2-7/INFO]: connected to tunnel server, sending claim token
+[14:13:23] [nioEventLoopGroup-2-7/INFO]: claim token sent
+[14:13:23] [nioEventLoopGroup-2-7/INFO]: connection to tunnel server has been established
+[14:13:23] [nioEventLoopGroup-2-7/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:23] [nioEventLoopGroup-2-7/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:23] [nioEventLoopGroup-2-7/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:23] [nioEventLoopGroup-2-8/INFO]: connected to local minecraft server
+[14:13:23] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:41928, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -93, -56, 37, 22, -25, -18, -85, 10, 102, -22, -32, 3, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 75, -18, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, -122, -121, -94, -58, -96, -92, 96, 67, -40, 59, 50, 43, 109, 55, -104, 101], tunnelServerId=1, dataCenterId=44}
+[14:13:23] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:23] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:23] [nioEventLoopGroup-2-1/INFO]: connected to tunnel server, sending claim token
+[14:13:23] [nioEventLoopGroup-2-1/INFO]: claim token sent
+[14:13:23] [nioEventLoopGroup-2-1/INFO]: connection to tunnel server has been established
+[14:13:23] [nioEventLoopGroup-2-1/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:23] [nioEventLoopGroup-2-1/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:23] [nioEventLoopGroup-2-1/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:23] [nioEventLoopGroup-2-2/INFO]: connected to local minecraft server
+[14:13:23] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:41936, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -93, -48, 106, -11, -32, -33, -85, 10, 102, -22, -32, 3, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 108, -33, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -6, -27, -81, -85, 11, 123, 56, -94, 97, -128, -93, 2, -63, -21, -120, 59], tunnelServerId=1, dataCenterId=44}
+[14:13:23] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:23] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:23] [nioEventLoopGroup-2-3/INFO]: connected to tunnel server, sending claim token
+[14:13:23] [nioEventLoopGroup-2-3/INFO]: claim token sent
+[14:13:23] [nioEventLoopGroup-2-3/INFO]: connection to tunnel server has been established
+[14:13:23] [nioEventLoopGroup-2-3/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:23] [nioEventLoopGroup-2-3/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:23] [nioEventLoopGroup-2-3/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:23] [nioEventLoopGroup-2-4/INFO]: connected to local minecraft server
+[14:13:25] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:37542, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -110, -90, 116, -104, 56, -65, -85, 10, 102, -22, -32, 5, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 116, -65, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, -61, 6, 76, -42, -102, 5, 114, -101, -62, 107, -12, 105, 103, -30, 13, 95], tunnelServerId=1, dataCenterId=44}
+[14:13:25] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:25] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:25] [nioEventLoopGroup-2-5/INFO]: connected to tunnel server, sending claim token
+[14:13:25] [nioEventLoopGroup-2-5/INFO]: claim token sent
+[14:13:25] [nioEventLoopGroup-2-5/INFO]: connection to tunnel server has been established
+[14:13:25] [nioEventLoopGroup-2-5/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:25] [nioEventLoopGroup-2-5/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:25] [nioEventLoopGroup-2-5/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:25] [nioEventLoopGroup-2-6/INFO]: connected to local minecraft server
+[14:13:26] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:37558, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -110, -74, -119, -24, 120, -10, -85, 10, 102, -22, -32, 6, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -75, -10, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, -112, -1, -13, 61, 125, -95, -105, -109, -23, 101, -68, -86, 71, -85, 84, -66], tunnelServerId=1, dataCenterId=44}
+[14:13:26] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:26] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:26] [nioEventLoopGroup-2-7/INFO]: connected to tunnel server, sending claim token
+[14:13:26] [nioEventLoopGroup-2-7/INFO]: claim token sent
+[14:13:26] [nioEventLoopGroup-2-7/INFO]: connection to tunnel server has been established
+[14:13:26] [nioEventLoopGroup-2-7/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:26] [nioEventLoopGroup-2-7/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:26] [nioEventLoopGroup-2-7/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:26] [nioEventLoopGroup-2-8/INFO]: connected to local minecraft server
+[14:13:27] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:37570, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -110, -62, 114, -105, -113, -10, -85, 10, 102, -22, -32, 6, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 84, -10, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, -42, -99, 75, -77, -12, 101, 8, -35, 40, -94, 101, -25, 56, -85, -55, -10], tunnelServerId=1, dataCenterId=44}
+[14:13:27] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:27] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:27] [nioEventLoopGroup-2-1/INFO]: connected to tunnel server, sending claim token
+[14:13:27] [nioEventLoopGroup-2-1/INFO]: claim token sent
+[14:13:27] [nioEventLoopGroup-2-1/INFO]: connection to tunnel server has been established
+[14:13:27] [nioEventLoopGroup-2-1/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:27] [nioEventLoopGroup-2-1/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:27] [nioEventLoopGroup-2-1/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:27] [nioEventLoopGroup-2-2/INFO]: connected to local minecraft server
+[14:13:27] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:37578, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -110, -54, 69, 79, -126, -119, -85, 10, 102, -22, -32, 7, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -123, -119, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 13, 27, -91, -104, 48, -125, 86, 37, -123, 95, 51, -53, -113, 79, -65, -72], tunnelServerId=1, dataCenterId=44}
+[14:13:27] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:27] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:27] [nioEventLoopGroup-2-3/INFO]: connected to tunnel server, sending claim token
+[14:13:27] [nioEventLoopGroup-2-3/INFO]: claim token sent
+[14:13:27] [nioEventLoopGroup-2-3/INFO]: connection to tunnel server has been established
+[14:13:27] [nioEventLoopGroup-2-3/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:27] [nioEventLoopGroup-2-3/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:27] [nioEventLoopGroup-2-3/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:27] [nioEventLoopGroup-2-4/INFO]: connected to local minecraft server
+[14:13:27] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:37592, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -110, -40, 95, -122, -10, -13, -85, 10, 102, -22, -32, 7, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 37, -13, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, 49, -62, 31, 46, -2, -88, -21, -4, -123, -15, -121, -123, 120, 51, 89, -100], tunnelServerId=1, dataCenterId=44}
+[14:13:27] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:27] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:27] [nioEventLoopGroup-2-5/INFO]: connected to tunnel server, sending claim token
+[14:13:27] [nioEventLoopGroup-2-5/INFO]: claim token sent
+[14:13:27] [nioEventLoopGroup-2-5/INFO]: connection to tunnel server has been established
+[14:13:27] [nioEventLoopGroup-2-5/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:27] [nioEventLoopGroup-2-5/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:27] [nioEventLoopGroup-2-5/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:27] [nioEventLoopGroup-2-6/INFO]: connected to local minecraft server
+[14:13:39] [Thread-13/INFO]: got new client: NewClient{connectAddr=[2602:fbaf:080c:0000:0000:0000:0000:00c2]:23639, peerAddr=[2001:19f0:6402:08f2:5400:05ff:fe0c:67c3]:43974, claimAddress=209.25.142.2:43786, claimToken=[64, 0, 88, 38, 2, -5, -81, 8, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -62, 92, 87, 32, 1, 25, -16, 100, 2, 8, -14, 84, 0, 5, -1, -2, 12, 103, -61, -85, -58, 0, 11, 64, -23, -110, -75, 33, -76, -85, 10, 102, -22, -32, 19, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 49, -76, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, 55, 91, -25, -108, 100, -29, 50, 34, -57, 24, 45, 86, -125, -85, 111, -82], tunnelServerId=1, dataCenterId=44}
+[14:13:39] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:39] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:39] [nioEventLoopGroup-2-7/INFO]: connected to tunnel server, sending claim token
+[14:13:39] [nioEventLoopGroup-2-7/INFO]: claim token sent
+[14:13:39] [nioEventLoopGroup-2-7/INFO]: connection to tunnel server has been established
+[14:13:39] [nioEventLoopGroup-2-7/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:39] [nioEventLoopGroup-2-7/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:39] [nioEventLoopGroup-2-7/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:39] [nioEventLoopGroup-2-8/INFO]: connected to local minecraft server
+[14:13:42] [Thread-13/INFO]: got new client: NewClient{connectAddr=[2602:fbaf:080c:0000:0000:0000:0000:00c2]:23639, peerAddr=[2001:19f0:6402:08f2:5400:05ff:fe0c:67c3]:43986, claimAddress=209.25.142.2:43786, claimToken=[64, 0, 88, 38, 2, -5, -81, 8, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -62, 92, 87, 32, 1, 25, -16, 100, 2, 8, -14, 84, 0, 5, -1, -2, 12, 103, -61, -85, -46, 0, 11, 89, 113, -10, -20, -6, -123, -85, 10, 102, -22, -32, 22, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 30, -123, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, 11, -89, 79, 77, 46, -73, -89, -69, 126, -83, 3, -16, -36, 95, -60, -44], tunnelServerId=1, dataCenterId=44}
+[14:13:42] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:42] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:42] [nioEventLoopGroup-2-1/INFO]: connected to tunnel server, sending claim token
+[14:13:42] [nioEventLoopGroup-2-1/INFO]: claim token sent
+[14:13:42] [nioEventLoopGroup-2-1/INFO]: connection to tunnel server has been established
+[14:13:42] [nioEventLoopGroup-2-1/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:42] [nioEventLoopGroup-2-1/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:42] [nioEventLoopGroup-2-1/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:42] [nioEventLoopGroup-2-2/INFO]: connected to local minecraft server
+[14:13:45] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=216.128.138.102:46578, claimAddress=209.25.142.2:43786, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, -40, -128, -118, 102, -75, -14, 124, -104, -104, 6, -85, 10, 102, -22, -32, 25, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 1, 6, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -13, -24, 44, -64, -101, -59, -80, 12, 86, -55, -42, -76, 104, -91, 18, -82], tunnelServerId=1, dataCenterId=44}
+[14:13:45] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:45] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:45] [nioEventLoopGroup-2-3/INFO]: connected to tunnel server, sending claim token
+[14:13:45] [nioEventLoopGroup-2-3/INFO]: claim token sent
+[14:13:45] [nioEventLoopGroup-2-3/INFO]: connection to tunnel server has been established
+[14:13:45] [nioEventLoopGroup-2-3/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:45] [nioEventLoopGroup-2-3/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:45] [nioEventLoopGroup-2-3/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:45] [nioEventLoopGroup-2-4/INFO]: connected to local minecraft server
+[14:13:46] [Thread-13/INFO]: got new client: NewClient{connectAddr=[2602:fbaf:080c:0000:0000:0000:0000:00c2]:23639, peerAddr=[2001:19f0:6402:08f2:5400:05ff:fe0c:67c3]:57434, claimAddress=209.25.142.2:43786, claimToken=[64, 0, 88, 38, 2, -5, -81, 8, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -62, 92, 87, 32, 1, 25, -16, 100, 2, 8, -14, 84, 0, 5, -1, -2, 12, 103, -61, -32, 90, 0, 0, 24, 60, -128, 70, -42, 36, -85, 10, 102, -22, -32, 26, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -65, 36, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, -45, 84, -92, -124, 89, 39, 1, 69, -43, -100, -88, 19, -37, 36, 111, -19], tunnelServerId=1, dataCenterId=44}
+[14:13:46] [Thread-13/INFO]: starting tcp tunnel for client
+[14:13:46] [Thread-13/INFO]: start connection to /209.25.142.2:43786 to claim client
+[14:13:46] [nioEventLoopGroup-2-5/INFO]: connected to tunnel server, sending claim token
+[14:13:46] [nioEventLoopGroup-2-5/INFO]: claim token sent
+[14:13:46] [nioEventLoopGroup-2-5/INFO]: connection to tunnel server has been established
+[14:13:46] [nioEventLoopGroup-2-5/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:13:46] [nioEventLoopGroup-2-5/INFO]: failed to get ServerConnection from Minecraft Server
+[14:13:46] [nioEventLoopGroup-2-5/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:13:46] [nioEventLoopGroup-2-6/INFO]: connected to local minecraft server
+[14:15:39] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.142.194:23639, peerAddr=61.9.110.224:51378, claimAddress=209.25.142.2:43784, claimToken=[44, 0, 60, -47, 25, -114, -62, 92, 87, 61, 9, 110, -32, -56, -78, -95, -64, -66, -80, -85, 8, 102, -22, -32, -117, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -94, -80, -85, 8, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, -122, -121, -107, 16, 119, 114, 45, 111, -105, 67, 104, 37, 75, -35, 87, -103], tunnelServerId=3, dataCenterId=18}
+[14:15:39] [Thread-13/INFO]: starting tcp tunnel for client
+[14:15:39] [Thread-13/INFO]: start connection to /209.25.142.2:43784 to claim client
+[14:15:39] [nioEventLoopGroup-2-7/INFO]: connected to tunnel server, sending claim token
+[14:15:39] [nioEventLoopGroup-2-7/INFO]: claim token sent
+[14:15:39] [nioEventLoopGroup-2-7/INFO]: connection to tunnel server has been established
+[14:15:39] [nioEventLoopGroup-2-7/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:15:39] [nioEventLoopGroup-2-7/INFO]: failed to get ServerConnection from Minecraft Server
+[14:15:39] [nioEventLoopGroup-2-7/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:15:39] [nioEventLoopGroup-2-8/INFO]: connected to local minecraft server
+[14:15:41] [Server thread/INFO]: jemie_016[/127.0.0.1:45378] logged in with entity id 2180 at (-1850.4756466276654, 65.0, -920.2048461130149)
+[14:15:41] [Server thread/INFO]: Sending server config values to client
+[14:15:41] [Server thread/INFO]: Loading config from file...
+[14:15:41] [Server thread/INFO]: jemie_016 joined the game
+[14:15:41] [Server thread/INFO]: Priority overwritten for player jemie_016. Claiming: GRAVE / Robbing: INVENTORY
+[14:15:41] [Server thread/INFO]: Receiving client config
+[14:18:22] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.142.194:23639, peerAddr=54.36.120.8:47098, claimAddress=209.25.142.2:43783, claimToken=[44, 0, 60, -47, 25, -114, -62, 92, 87, 54, 36, 120, 8, -73, -6, 82, -31, -21, 24, -85, 7, 102, -22, -31, 46, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -96, 24, -85, 7, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -43, -22, -24, -45, -100, -114, 34, -106, 96, -88, -4, 36, -78, -61, -1, -9], tunnelServerId=1, dataCenterId=18}
+[14:18:22] [Thread-13/INFO]: starting tcp tunnel for client
+[14:18:22] [Thread-13/INFO]: start connection to /209.25.142.2:43783 to claim client
+[14:18:22] [nioEventLoopGroup-2-1/INFO]: connected to tunnel server, sending claim token
+[14:18:22] [nioEventLoopGroup-2-1/INFO]: claim token sent
+[14:18:22] [nioEventLoopGroup-2-1/INFO]: connection to tunnel server has been established
+[14:18:22] [nioEventLoopGroup-2-1/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:18:22] [nioEventLoopGroup-2-1/INFO]: failed to get ServerConnection from Minecraft Server
+[14:18:22] [nioEventLoopGroup-2-1/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:18:22] [nioEventLoopGroup-2-2/INFO]: connected to local minecraft server
+[14:18:23] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.141.194:23639, peerAddr=54.36.120.8:33088, claimAddress=209.25.142.2:43783, claimToken=[44, 0, 60, -47, 25, -115, -62, 92, 87, 54, 36, 120, 8, -127, 64, 52, -59, -20, 106, -85, 7, 102, -22, -31, 47, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 50, 106, -85, 7, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -23, 89, 3, 101, -19, -28, 46, -52, 5, -15, -117, -63, -78, -4, -26, 25], tunnelServerId=1, dataCenterId=38}
+[14:18:23] [Thread-13/INFO]: starting tcp tunnel for client
+[14:18:23] [Thread-13/INFO]: start connection to /209.25.142.2:43783 to claim client
+[14:18:23] [nioEventLoopGroup-2-3/INFO]: connected to tunnel server, sending claim token
+[14:18:23] [nioEventLoopGroup-2-3/INFO]: claim token sent
+[14:18:23] [nioEventLoopGroup-2-3/INFO]: connection to tunnel server has been established
+[14:18:23] [nioEventLoopGroup-2-3/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:18:23] [nioEventLoopGroup-2-3/INFO]: failed to get ServerConnection from Minecraft Server
+[14:18:23] [nioEventLoopGroup-2-3/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:18:23] [nioEventLoopGroup-2-4/INFO]: connected to local minecraft server
+[14:18:25] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.140.194:23639, peerAddr=54.36.120.8:49720, claimAddress=209.25.142.2:43783, claimToken=[44, 0, 60, -47, 25, -116, -62, 92, 87, 54, 36, 120, 8, -62, 56, 64, -73, -86, -20, -85, 7, 102, -22, -31, 49, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, -41, -20, -85, 7, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 9, -98, -50, -29, -110, -47, -74, 109, 13, -9, -116, -70, 85, -96, 99, 112], tunnelServerId=1, dataCenterId=40}
+[14:18:25] [Thread-13/INFO]: starting tcp tunnel for client
+[14:18:25] [Thread-13/INFO]: start connection to /209.25.142.2:43783 to claim client
+[14:18:25] [nioEventLoopGroup-2-5/INFO]: connected to tunnel server, sending claim token
+[14:18:25] [nioEventLoopGroup-2-5/INFO]: claim token sent
+[14:18:25] [nioEventLoopGroup-2-5/INFO]: connection to tunnel server has been established
+[14:18:25] [nioEventLoopGroup-2-5/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:18:25] [nioEventLoopGroup-2-5/INFO]: failed to get ServerConnection from Minecraft Server
+[14:18:25] [nioEventLoopGroup-2-5/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:18:25] [nioEventLoopGroup-2-6/INFO]: connected to local minecraft server
+[14:18:29] [Thread-13/INFO]: got new client: NewClient{connectAddr=209.25.143.194:23639, peerAddr=54.36.120.8:37390, claimAddress=209.25.142.2:43783, claimToken=[44, 0, 60, -47, 25, -113, -62, 92, 87, 54, 36, 120, 8, -110, 14, -113, -2, -91, 43, -85, 7, 102, -22, -31, 53, 0, 0, 0, 0, 0, 8, -34, -75, 0, 0, 0, 0, 0, 55, 64, 4, 76, 43, -85, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 70, 52, -3, 90, -32, 116, 2, 52, -125, -121, -123, 29, 107, 89, 7, 35], tunnelServerId=1, dataCenterId=28}
+[14:18:29] [Thread-13/INFO]: starting tcp tunnel for client
+[14:18:29] [Thread-13/INFO]: start connection to /209.25.142.2:43783 to claim client
+[14:18:29] [nioEventLoopGroup-2-7/INFO]: connected to tunnel server, sending claim token
+[14:18:29] [nioEventLoopGroup-2-7/INFO]: claim token sent
+[14:18:29] [nioEventLoopGroup-2-7/INFO]: connection to tunnel server has been established
+[14:18:29] [nioEventLoopGroup-2-7/INFO]: Reflect: ReflectionHelper{ServerConnection=null, LegacyPingHandler=null, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=null, PacketDecoder=null, EnumProtocolDirection=null, PacketPrepender=null, PacketEncoder=null, NetworkManagerServer=null, NetworkManager=null, HandshakeListener=null, PacketListener=null}
+[14:18:29] [nioEventLoopGroup-2-7/INFO]: failed to get ServerConnection from Minecraft Server
+[14:18:29] [nioEventLoopGroup-2-7/INFO]: connecting to minecraft server at localhost/127.0.0.1:25565
+[14:18:29] [nioEventLoopGroup-2-8/INFO]: connected to local minecraft server
+[14:20:43] [Server thread/INFO]: Creating Chair at class_2338{x=-1851, y=65, z=-949}, Block{betternether:cherry_bar_stool}[facing=east]
+[14:20:43] [Server thread/INFO]: Chair Block was deleted -> ejecting
+[14:20:44] [Server thread/INFO]: Creating Chair at class_2338{x=-1851, y=65, z=-949}, Block{betternether:cherry_bar_stool}[facing=east]
+[14:20:44] [Server thread/INFO]: Chair Block was deleted -> ejecting
+[14:20:49] [Server thread/INFO]: Creating Chair at class_2338{x=-1851, y=65, z=-949}, Block{betternether:cherry_bar_stool}[facing=east]
+[14:20:49] [Server thread/INFO]: Chair Block was deleted -> ejecting
+[14:20:53] [Server thread/INFO]: Chair Block was deleted -> ejecting
+[14:28:40] [Server thread/INFO]: Creating Chair at class_2338{x=-1851, y=65, z=-949}, Block{betternether:cherry_bar_stool}[facing=east]
+[14:29:31] [nioEventLoopGroup-2-7/WARN]: failed to send data to tunnel
+[14:29:31] [Server thread/INFO]: jemie_016 lost connection: Disconnected
+[14:29:31] [Server thread/INFO]: jemie_016 left the game
+[14:35:39] [Server thread/INFO]: [Not Secure] [Server] 
+[14:43:03] [Server thread/INFO]: [Not Secure] [Server] 
