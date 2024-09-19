@@ -3384,15 +3384,33 @@
     },
     "done": true
   },
-  "waystones:recipes/decorations/warp_scroll": {
+  "betternether:recipes/misc/wall_red_brown": {
     "criteria": {
-      "has_ender_pearl": "2024-09-17 13:30:08 +0000"
+      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
     },
     "done": true
   },
-  "minecraft:adventure/voluntary_exile": {
+  "minecraft:recipes/misc/bowl": {
     "criteria": {
-      "voluntary_exile": "2024-09-17 13:34:08 +0000"
+      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
+    },
+    "done": true
+  },
+  "betternether:recipes/food/stalagnate_bowl_mushroom": {
+    "criteria": {
+      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/mushroom_stew": {
+    "criteria": {
+      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
+    },
+    "done": true
+  },
+  "waystones:recipes/decorations/warp_scroll": {
+    "criteria": {
+      "has_ender_pearl": "2024-09-17 13:30:08 +0000"
     },
     "done": true
   },
@@ -3408,39 +3426,9 @@
     },
     "done": true
   },
-  "travelersbackpack:recipes/misc/sheep": {
-    "criteria": {
-      "has_white_wool": "2024-09-17 13:31:00 +0000"
-    },
-    "done": true
-  },
   "betterend:recipes/misc/ender_eye_amber": {
     "criteria": {
       "has_ender_pearl": "2024-09-17 13:30:08 +0000"
-    },
-    "done": true
-  },
-  "betternether:recipes/misc/wall_red_brown": {
-    "criteria": {
-      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/bowl": {
-    "criteria": {
-      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
-    },
-    "done": true
-  },
-  "travelersbackpack:recipes/decorations/white_sleeping_bag": {
-    "criteria": {
-      "has_white_wool": "2024-09-17 13:31:00 +0000"
-    },
-    "done": true
-  },
-  "betternether:recipes/food/stalagnate_bowl_mushroom": {
-    "criteria": {
-      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
     },
     "done": true
   },
@@ -3456,11 +3444,47 @@
     },
     "done": true
   },
-  "minecraft:recipes/food/mushroom_stew": {
+  "travelersbackpack:recipes/misc/sheep": {
     "criteria": {
-      "has_red_mushroom": "2024-09-17 13:27:31 +0000"
+      "has_white_wool": "2024-09-17 13:31:00 +0000"
     },
     "done": true
+  },
+  "travelersbackpack:recipes/decorations/white_sleeping_bag": {
+    "criteria": {
+      "has_white_wool": "2024-09-17 13:31:00 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/voluntary_exile": {
+    "criteria": {
+      "voluntary_exile": "2024-09-17 13:34:08 +0000"
+    },
+    "done": true
+  },
+  "betternether:enter_nether": {
+    "criteria": {
+      "entered_nether": "2024-09-19 04:49:37 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2024-09-19 04:49:37 +0000"
+    },
+    "done": true
+  },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2024-09-19 04:49:37 +0000"
+    },
+    "done": true
+  },
+  "betternether:all_the_biomes": {
+    "criteria": {
+      "betternether:nether_jungle": "2024-09-19 04:49:42 +0000"
+    },
+    "done": false
   },
   "DataVersion": 3955
 }

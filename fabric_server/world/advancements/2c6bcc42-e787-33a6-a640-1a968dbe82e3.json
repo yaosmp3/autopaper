@@ -27,15 +27,17 @@
     "criteria": {
       "minecraft:cold_ocean": "2024-09-16 09:29:50 +0000",
       "minecraft:flower_forest": "2024-09-18 11:44:18 +0000",
-      "minecraft:frozen_ocean": "2024-09-16 09:31:56 +0000",
       "minecraft:beach": "2024-09-17 03:28:12 +0000",
-      "minecraft:frozen_river": "2024-09-16 09:31:55 +0000",
       "minecraft:forest": "2024-09-16 02:01:41 +0000",
       "minecraft:taiga": "2024-09-16 09:31:08 +0000",
-      "minecraft:sunflower_plains": "2024-09-18 11:39:28 +0000",
       "minecraft:river": "2024-09-16 02:01:49 +0000",
-      "minecraft:meadow": "2024-09-18 11:42:05 +0000",
       "minecraft:lush_caves": "2024-09-16 09:29:33 +0000",
+      "minecraft:frozen_ocean": "2024-09-16 09:31:56 +0000",
+      "minecraft:frozen_river": "2024-09-16 09:31:55 +0000",
+      "minecraft:ocean": "2024-09-18 23:45:09 +0000",
+      "minecraft:sunflower_plains": "2024-09-18 11:39:28 +0000",
+      "minecraft:cherry_grove": "2024-09-19 01:20:10 +0000",
+      "minecraft:meadow": "2024-09-18 11:42:05 +0000",
       "minecraft:plains": "2024-09-16 00:33:31 +0000"
     },
     "done": false
@@ -228,6 +230,7 @@
       "bread": "2024-09-16 02:05:40 +0000",
       "rotten_flesh": "2024-09-16 04:30:40 +0000",
       "potato": "2024-09-16 09:08:05 +0000",
+      "sweet_berries": "2024-09-19 01:19:01 +0000",
       "beef": "2024-09-17 11:29:04 +0000",
       "golden_carrot": "2024-09-16 04:54:30 +0000",
       "carrot": "2024-09-16 10:14:49 +0000"
@@ -240,9 +243,11 @@
       "minecraft:skeleton": "2024-09-16 07:58:26 +0000",
       "minecraft:phantom": "2024-09-16 08:04:12 +0000",
       "minecraft:enderman": "2024-09-16 09:26:05 +0000",
+      "minecraft:witch": "2024-09-19 01:39:13 +0000",
       "minecraft:spider": "2024-09-16 04:49:11 +0000",
       "minecraft:zombie": "2024-09-16 02:09:56 +0000",
       "minecraft:creeper": "2024-09-16 07:49:03 +0000",
+      "minecraft:drowned": "2024-09-19 00:10:40 +0000",
       "minecraft:zombie_villager": "2024-09-16 09:35:21 +0000"
     },
     "done": false
@@ -3820,6 +3825,270 @@
   "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
     "criteria": {
       "has_stone": "2024-09-18 12:12:23 +0000"
+    },
+    "done": true
+  },
+  "betterend:recipes/misc/end_stone_smelter": {
+    "criteria": {
+      "has_tag_wover_furnaces": "2024-09-18 23:40:31 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smoker": {
+    "criteria": {
+      "has_furnace": "2024-09-18 23:40:31 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_blue_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/pink_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/black_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/gray_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_gray_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/green_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brown_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/blue_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lime_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/glass_pane": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magenta_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/white_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "betterend:recipes/misc/tined_glass_from_smaragdant": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/glass_bottle": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/purple_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/yellow_stained_glass": {
+    "criteria": {
+      "has_glass": "2024-09-18 23:46:59 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/fletching_table": {
+    "criteria": {
+      "has_flint": "2024-09-18 23:47:30 +0000"
+    },
+    "done": true
+  },
+  "mythicmetals:osmium": {
+    "criteria": {
+      "gliscos_favorite": "2024-09-19 01:20:21 +0000"
+    },
+    "done": true
+  },
+  "mythicmetals:recipes/misc/smelting/osmium_from_raw_ore": {
+    "criteria": {
+      "has_material": "2024-09-19 01:20:21 +0000"
+    },
+    "done": true
+  },
+  "mythicmetals:recipes/misc/blasting/osmium_from_raw_ore": {
+    "criteria": {
+      "has_material": "2024-09-19 01:20:21 +0000"
+    },
+    "done": true
+  },
+  "mythicmetals:recipes/osmium_chainmail_smithing_template": {
+    "criteria": {
+      "found_osmium": "2024-09-19 01:20:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/spectral_arrow": {
+    "criteria": {
+      "has_glowstone_dust": "2024-09-19 01:39:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/glowstone": {
+    "criteria": {
+      "has_glowstone_dust": "2024-09-19 01:39:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_wood": {
+    "criteria": {
+      "has_log": "2024-09-19 01:52:20 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_planks": {
+    "criteria": {
+      "has_logs": "2024-09-19 01:52:20 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_button": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_door": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/birch_fence": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/birch_sign": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_fence_gate": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_slab": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_stairs": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_trapdoor": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/birch_pressure_plate": {
+    "criteria": {
+      "has_planks": "2024-09-19 01:55:17 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_iron_block": {
+    "criteria": {
+      "has_raw_iron": "2024-09-19 02:26:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_blasting_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2024-09-19 02:26:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_smelting_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2024-09-19 02:26:09 +0000"
+    },
+    "done": true
+  },
+  "mythicmetals:recipes/misc/smelting/quadrillum_from_raw_ore": {
+    "criteria": {
+      "has_material": "2024-09-19 06:26:02 +0000"
+    },
+    "done": true
+  },
+  "mythicmetals:recipes/misc/blasting/quadrillum_from_raw_ore": {
+    "criteria": {
+      "has_material": "2024-09-19 06:26:02 +0000"
     },
     "done": true
   },
